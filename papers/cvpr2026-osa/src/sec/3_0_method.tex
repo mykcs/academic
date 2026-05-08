@@ -1,0 +1,15 @@
+\section{Method}
+    \label{sec:method}
+
+\noindent
+We propose \mymodel, a sequence architecture designed to tackle the challenges of complex spatiotemporal information and ultrasound cardiac noise in echocardiography video segmentation (see~\cref{fig:met:architecture}).
+
+Given a 2D ultrasound video sequence $\boldsymbol{I}_{1:t} \in \mathbb{R}^{tHW \times C_d}$, where $\boldsymbol{I}_{1:t}$ represents the sequence of ultrasound frames over time, the goal of our model is to predict the accurate LV segmentation masks for the entire sequence.
+The model uses ResNet-50~\cite{He_CVPR16_resnet} as the visual backbone.
+It employs APFE for contrast decomposition, processing the input frame $\mathbf{I}_t$ into a structured key representation $\mathbf{Key}_t$.
+The model then constructs a fixed-size state representation $\mathbf{S}_t \in \mathbb{R}^{C_v \times C_k}$ using $\mathbf{Key}_t$ and its corresponding $\mathbf{Value}_t$.
+During the linear temporal updates of $\mathbf{S}_t$, the model constrains the state evolution to the Stiefel manifold via an orthogonalized update mechanism, utilizing Newton-Schulz iteration for efficient computation.
+Stability is further regularized through weight decay.
+In the prediction phase, the features of the target frames (e.g., ED and ES frames) serve as $\mathbf{Query}_t$, interacting with the maintained state $\mathbf{S}_t$ to decode the final predictions.
+Crucially, unlike semi-supervised video object segmentation methods that require a first-frame reference mask, our inference process operates in a fully automatic manner without relying on any manual prompt guidance, which is highly consistent with real-world clinical workflows.
+During the training phase, the model adopts the evaluation setting from \cite{deng2024memsam,ICCV25_gdkvm} to simulate real-world clinical scenarios, optimizing by comparing predictions with ground truth annotations.

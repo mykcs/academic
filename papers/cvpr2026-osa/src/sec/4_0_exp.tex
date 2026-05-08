@@ -1,0 +1,28 @@
+\section{Experiments}
+    \label{sec:experiments}
+
+\subsection{Implementation Details}
+
+\noindent
+\textbf{Network architecture.}
+We model temporal dynamics in ultrasound videos via a learnable state that evolves from frame-wise ResNet features refined by a lightweight APFE block. 
+The state transition is stabilized through orthogonalization. 
+Weight decay (0.02) is applied for regularization. 
+During inference, frame features serve as $\mathbf{Query}_t$ to retrieve segmentation masks from the learned state $\mathbf{S}_t$, and training employs point-supervised cross-entropy and Dice loss following \cite{Liu_2025_CVPR,ICCV25_gdkvm} with AdamW~\cite{loshchilov2018decoupled_adamw} ($1\times10^{-4}$ learning rate, batch size $6$) and standard data augmentation on two RTX 2080 GPUs.
+
+\noindent
+\textbf{Datasets.}
+We evaluate \mymodel on two public echocardiography video datasets: CAMUS~\cite{tmi19_camus} and EchoNet-Dynamic~\cite{nature20_echodynamic}. 
+CAMUS contains 500 patient studies with apical four-chamber (A4C) and two-chamber (A2C) views.
+Each frame from ED to ES is annotated with endocardial, epicardial, and atrial contours, offering dense supervision for assessing temporal consistency across the cardiac cycle. 
+EchoNet-Dynamic includes 10,030 A4C videos with annotations only at ED and ES, supporting large-scale evaluation of model generalization under sparse labels. 
+Combining these datasets enables comprehensive assessment under both dense and sparse annotation regimes, resembling real clinical settings where frame-wise labeling is costly. 
+For preprocessing, CAMUS videos are resized to $256 \times 256$ with 15 frames, while EchoNet-Dynamic videos are resized to $128 \times 128$ with 10 frames.
+We train \mymodel for 3000 iterations, sufficient for convergence on both datasets.
+
+\noindent
+\textbf{Metrics.}
+We evaluate the model using standard segmentation and clinical performance metrics.
+Geometric accuracy is quantified by the mean Dice coefficient (mDice) and the mean 95\% Hausdorff Distance (mHD95), averaged over the ED and ES phases.
+For clinical relevance, we estimate the $\text{LV}_{\text{EF}}$ from the predicted masks using Simpson’s rule~\cite{LANG20151}.
+The estimation accuracy is then evaluated using the Pearson correlation coefficient ($r$), mean bias, and standard deviation between the predicted and reference $\text{LV}_{\text{EF}}$ values.

@@ -1,0 +1,28 @@
+\section{Related Work}
+    \label{sec:related}
+
+\noindent
+\textbf{Sequence modeling in echocardiography video segmentation.} 
+Echocardiography video segmentation is significantly affected by factors such as speckle noise, probe motion, and rapid non-rigid cardiac deformations.
+The standard temporal attention mechanism \cite{NIPS17_Attention,ICLR21_vit,TMI24_DSA} computes the output $o_t$ by calculating the correlation between the full history of key-value pairs $\{(\boldsymbol{k}_\tau, \boldsymbol{v}_\tau)\}_{\tau=1}^t$ and the current query $q_t$.
+Although this mechanism can establish global temporal dependencies, its computational complexity grows quadratically with the sequence length.
+\emph{Retrieval} paradigms based on a memory bank~\cite{iccv19_stm,neurips21_stm} have been adopted by methods such as XMem~\cite{eccv22_xmem}, XMem++~\cite{iccv25_xmempp}, Cutie~\cite{cvpr24_cutie}, and SAM 2 \cite{ICLR25_SAM2,CVPR25_DAM}.
+Similarly, MemSAM~\cite{deng2024memsam} and SAMed-2~\cite{MICCAI25_SAMed2} maintain temporal consistency by filtering and storing reference frames in a memory bank, leveraging feature matching and retrieval.
+However, limited by their discrete storage mechanisms, these methods struggle to fully utilize the continuous historical information of videos.
+LRM \cite{katharopoulos_transformers_2020,ICML20_ttt,ICML21_fwp,ICLR25_gdn,ICLR26_ttt_LaCT} offer an alternative feature aggregation strategy: compressing the complete history into a fixed-size hidden state matrix $\mathbf{S}_t$, thereby achieving inference with constant time complexity.
+EchoVim~\cite{mm25_echovim}, based on Vision Mamba \cite{CLM24_mamba,ICML24_mamba2,eccv24_videomamba}, introduces this type of architecture to improve computational efficiency.
+However, its temporal modeling still relies on bidirectional inference dependent on specific frames and Dynamic Inter-frame Temporal Attention between adjacent frames, which essentially remains sparse modeling based on specific physiological priors.
+Works targeting long-sequence video modeling (such as LiVOS~\cite{Liu_2025_CVPR} and GDKVM \cite{ICLR25_gdn,ICCV25_gdkvm}) utilize a linear key-value association mechanism to compress temporal history into a time-dependent hidden state $\mathbf{S}_t$.
+However, these methods operate in unconstrained Euclidean space, where scalar gating mechanisms act as indiscriminate weight decay on the singular values of $\mathbf{S}_t$.
+Over long sequences, this inevitably collapses the state matrix into a low-rank approximation, destroying fine-grained spatial details critical for valvular motion analysis and reducing the effective memory capacity.
+Addressing this rank collapse requires fundamentally abandoning the Euclidean formulation in favor of geometric constraints that preserve the spectral structure of memory states.
+
+\noindent
+\textbf{Geometric constraints in recurrent optimization.}
+Viewing sequence modeling through an optimization lens, methods like Test-Time Training \cite{ICML20_ttt,ICML25_ttt,arxiv25_ttregression} formulate hidden state updates as gradient descent steps on a surrogate objective.
+However, because these updates operate purely in unconstrained Euclidean space, the state remains vulnerable to singular value degradation and rank collapse over long sequences.
+In parallel, orthogonal constraints have shown benefits in parameter optimization.
+Muon \cite{post24_muon,arxiv25_kimimuon,ICLR26_ttt_LaCT} applies Newton-Schulz iterations \cite{SIAM06_Schur,SIAM06_Newton} to orthogonalize the gradient or momentum rather than the weights themselves, finding the steepest descent direction under spectral norm constraints.
+While effective for parameter updates, such constraints address the optimization dynamics rather than the inference-time state evolution.
+Orthogonal and unitary constraints on state transitions have long been recognized as mechanisms to prevent rank collapse in traditional RNNs \cite{PUR08_Absil,ICML16_urnn,NIPS16_fullurnn}.
+Extending this geometric rigor to the matrix-valued states of modern linear associative memory, however, has been hindered by the prohibitive computational cost of exact Singular Value Decomposition (SVD) for enforcing orthogonality.

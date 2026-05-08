@@ -1,0 +1,27 @@
+\begin{table}[t]
+    \centering
+    \caption{Comparison of different models on CAMUS.
+        \textbf{Paradigm} denotes the core temporal memory and update mechanism;
+        \textbf{Para} is the number of parameters (M);
+        \textbf{Mem} is the GPU memory usage during training (GB);
+        and \textbf{Time} is the approximate training time (hours) to reach the best mDice.}
+    \label{tab:type}
+    \resizebox{\linewidth}{!}{
+        \begin{tabular}{lcrrrr}
+            \toprule
+            \textbf{Method} & \textbf{Paradigm} & \textbf{Para} & \textbf{Mem} & \textbf{Time} \\
+            \midrule
+            PolaFormer & \textcolor{lime!70!black}{Linear} & 29.0 & 13.2 & 3.5 \\
+            Vision LSTM & \textcolor{lime!70!black}{Linear} & 5.9 & 4.5 & 2.5 \\
+            Cutie & \textcolor{orange!80!black}{Retrieval} & 39.1 & 8.1 & 6.0 \\
+            LiVOS & \textcolor{green!70!black}{LKVA} & 35.1 & 7.4 & 5.0 \\
+            SAMed-2 & \textcolor{orange!80!black}{Retrieval} & 110.1 & 27.5 & 7.0 \\
+            EchoVim & \textcolor{lime!70!black}{SSM} & 42.0 & 34.9 & 9.0 \\
+            Vivim & \textcolor{lime!70!black}{SSM} & 59.6 & 5.8 & 10.0 \\
+            GDKVM & \textcolor{green!70!black}{LKVA} & 35.2 & 7.5 & 4.5 \\
+            \midrule
+            \textbf{\mymodel} & \textcolor{blue!70!black}{Manifold Proj.} & \textbf{38.3} & \textbf{7.6} & \textbf{3.0} \\
+            \bottomrule
+        \end{tabular}
+    }
+\end{table}

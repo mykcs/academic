@@ -1,0 +1,39 @@
+\section{Problem Setting}
+
+\noindent 
+Exhaustive frame-by-frame annotation of echocardiography videos is labor-intensive in clinical settings.
+Consequently, this work addresses semantic segmentation under a sparse temporal supervision setting~\cite{ICCV25_gdkvm}.
+
+Let the input echocardiography video sequence of length $T$ be denoted as
+\begin{equation*}
+    V = \{x_1, x_2, \dots, x_T\}.
+\end{equation*}
+where $x_t$ represents the image frame at time step $t$. 
+
+Under the target sparse supervision setting, ground truth segmentation masks are provided exclusively for the first ($t=1$) and the last ($t=T$) frames, which typically correspond to the end-diastole and end-systole phases.
+Thus, the index set of annotated frames is strictly defined as
+\begin{equation*}
+    S = \{1, T\}.
+\end{equation*}
+
+The available ground truth segmentation masks during the training phase are defined as
+\begin{equation*}
+    Y_S = \{y_1, y_T\}.
+\end{equation*}
+\noindent
+This formulation indicates that labels for frames $1 < t < T$ are unavailable during training.
+
+The objective is to train a segmentation model $f_\theta$ parameterized by $\theta$.
+The model processes the entire video sequence $V$ to generate dense segmentation predictions for all frames
+\begin{equation*}
+    \hat{Y} = \{\hat{y}_1, \hat{y}_2, \dots, \hat{y}_T\} = f_\theta(V).
+\end{equation*}
+
+Given the sparse annotations, the objective function is computed exclusively on the first and last frames.
+The loss $\mathcal{L}$ is formulated as
+\begin{equation*}
+    \mathcal{L}(\theta) = \ell(\hat{y}_1, y_1) + \ell(\hat{y}_T, y_T),
+\end{equation*}
+where $\ell$ denotes a standard segmentation loss function.
+Optimizing this objective requires the model to utilize temporal context to generate segmentations for the unannotated frames.
+During the inference phase, the model operates in a fully automated manner, generating predictions for the entire sequence without requiring any additional prompts or manual interventions, simulating a real-world clinical workflow.

@@ -1,0 +1,12 @@
+\subsection{Discussions and Limitations}
+    \label{subsec:discussion}
+
+\noindent
+While \mymodel improves temporal consistency, it has several practical caveats.
+Under the LRM architecture, the linear attention enhances the representational capacity of the state matrix through key-value joint modeling~\cite{katharopoulos_transformers_2020}; gated delta net \cite{JPA88_sinnm,EL89_nncudr,nc92_schmidhuber,ICLR25_gdn,ICCV25_gdkvm,arxiv25_kimidelta} optimizes the update formula; and we push this forward by shifting the state transition process onto a manifold.
+However, despite improving temporal consistency, our training regime remains constrained by fixed-length sequences.
+Since real-world medical videos are continuous with varied durations, maintaining stable memory propagation in a fully online setting remains challenging.
+We will explore further optimization directions within the LRM framework in the future.
+The method may produce failure cases in some situations (\cref{fig:fail}), which could be related to factors such as initialization.
+Furthermore, evaluation on datasets with consistent imaging protocols may lack robustness against real-world domain shifts caused by varying ultrasound equipment, probe orientations, or image qualities.
+Future work will focus on improving cross-domain generalization and adapting to continuous, unseen clinical video distributions.

@@ -1,0 +1,22 @@
+\section{Visualizing Optimization Dynamics}
+\label{sec:vis_opt}
+
+We analyze the geometric properties of the proposed Orthogonalized State Update (OSU) by comparing its optimization trajectories with standard Euclidean gradients.
+
+\paragraph{Manifold-constrained optimization.}
+As illustrated in~\cref{fig:landscape_3d_geo}, Euclidean updates operate in unconstrained space, treating the state matrix as a flattened vector.
+This approach risks violating the orthogonality constraints of the Stiefel manifold.
+In contrast, OSU employs an orthogonalized update via Newton-Schulz iteration, first performing a standard gradient step in ambient space then projecting back to the manifold, ensuring strict orthogonality of the state.
+By enforcing strict orthogonality of the state $\mathbf{S}$, OSU ensures numerical stability and prevents rank collapse over long sequences.
+
+\paragraph{Convergence stability.}
+The vector fields in~\cref{fig:landscape_2d_behavior} demonstrate that Euclidean gradients exhibit high-frequency oscillations due to a lack of manifold curvature awareness.
+In video segmentation tasks, such instabilities result in temporal inconsistency across frames.
+Conversely, OSU functions as an implicit preconditioner, aligning the gradient flow with the optimization landscape.
+This results in smoother convergence trajectories, which are essential for modeling continuous physiological dynamics, such as the cardiac cycle, without introducing high-frequency noise into the latent representation.
+
+\paragraph{Feature decorrelation and consistency.}
+The orthogonality constraints imposed by OSU promote semantic decorrelation within the latent state.
+By enforcing $\mathbf{S}^\top \mathbf{S} = \mathbf{I}$, OSU reduces feature redundancy and prevents mode collapse.
+This structural prior enables distinct state dimensions to represent independent dynamics, such as separating low-frequency ventricular contractions from high-frequency valve mechanics.
+Unlike the Euclidean regime where feature interference leads to temporal instability, OSU ensures that diverse motion patterns evolve along orthogonal trajectories, thereby improving the temporal consistency of the resulting segmentation masks.

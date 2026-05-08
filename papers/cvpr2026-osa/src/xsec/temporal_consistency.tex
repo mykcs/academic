@@ -1,0 +1,13 @@
+\section{Temporal Consistency in Video Segmentation}
+\label{sec:temporal_consistency}
+
+\noindent 
+Temporal consistency in video segmentation is defined as the stability of predicted masks across consecutive frames.
+While optical flow-based warping is a standard approach for quantifying such stability, its efficacy is constrained in echocardiography due to significant speckle noise, which degrades motion estimation accuracy.
+To address this, the temporal matching error $\mathcal{E}_{tme}$ is employed, defined as the mean absolute difference between the temporal Dice evolution of predicted masks $M$ and ground truth masks $G$:
+\begin{equation}
+    \mathcal{E}_{tme} = \frac{1}{T-1} \sum_{t=1}^{T-1} \left| \text{Dice}(M_t, M_{t-1}) - \text{Dice}(G_t, G_{t-1}) \right|
+    \label{eq:tme}
+\end{equation}
+where $T$ denotes the total number of frames.
+This metric quantifies the deviation of predicted temporal dynamics from the reference anatomical motion.

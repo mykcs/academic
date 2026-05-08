@@ -1,0 +1,27 @@
+\subsection{Ablation Studies}
+\label{subsec:abl}
+
+\noindent
+We conduct ablation studies on the network structure of \mymodel to validate the contribution of each component.
+As detailed in~\cref{tab:abl}, removing both the APFE module and the OSU mechanism degrades our architecture into a naive linear key-value association model (Baseline).
+Lacking geometric regularization and anatomical constraints, this baseline struggles to maintain temporal coherence and representation fidelity, resulting in noticeably limited segmentation accuracy.
+
+\noindent
+\textbf{Effect of APFE.}
+\Cref{tab:abl,fig:abl} demonstrate that the APFE module consistently improves the segmentation performance of \mymodel.
+As shown in~\cref{tab:abl}, the Full model achieves 94.82 mDice, a +1.88 improvement over the naive Baseline (92.94).
+APFE contributes +0.67 (93.61 vs 92.94) while OSU contributes the remaining +1.21 (94.82 vs 93.61), with negligible memory overhead during training.
+APFE injects structural priors into feature aggregation, enabling the model to capture cardiac morphology and preserve anatomical boundaries against ultrasound artifacts (\eg, speckle noise, attenuation).
+Visualizations in~\cref{fig:abl} confirm that APFE produces sharper activation responses along the endocardial borders, highlighting its superior capability in modeling complex cardiac geometry.
+
+\input{tab/abl_stab}
+
+\noindent
+\textbf{Effect of OSU.}
+\Cref{tab:geo_stability,tab:num_stability} validate our theoretical claims regarding structural regularization.
+Without manifold constraints, the Baseline model suffers from severe ill-conditioning and rank collapse: its minimum singular values vanish in 91.40\% of the steps (ColR), while the Mean Singular Value (MSV) uncontrollably drifts to 6.82 with high variance (SVVar = 1.47).
+By incorporating OSU, the network achieves strictly conditioned temporal propagation.
+The iterative gradient flow maps the state matrix to a scaled Stiefel manifold, forcing the Singular Value Variance (SVVar) to identically 0.00 and stabilizing the MSV at a constant 2.00.
+This isotropic state provides a well-conditioned geometric foundation for sequence modeling~\cite{ICML16_urnn}.
+Furthermore, the sharp decreases in Orthogonality Error (OrthE) and Temporal Drift provide direct empirical evidence that our approximate orthogonalization enforces consistent structural evolution.
+By maintaining this strict isometry, OSU suppresses motion artifacts and preserves anatomical fidelity throughout the entire cardiac cycle.

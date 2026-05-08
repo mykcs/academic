@@ -1,0 +1,38 @@
+\section{Introduction}
+
+\noindent
+Echocardiography is a cornerstone of cardiovascular diagnosis due to its non-invasive, cost-effective, and real-time nature~\cite{10.3389/fcvm.2020.00025}.
+Accurate segmentation of cardiac chambers, particularly the left ventricle (LV), from echocardiographic videos is essential for estimating the ejection fraction ($\text{LV}_{\text{EF}}$) and assessing precise cardiac function \cite{el2022semi,amer2021resdunet}.
+Reliable and temporally consistent segmentation provides a foundation for quantitative evaluation of cardiac motion.
+However, modeling the complex spatiotemporal dynamics of the heart under severe ultrasound noise remains a formidable challenge.
+To address this, we propose a novel paradigm that fundamentally shifts from traditional frame-wise prediction or unconstrained state tracking to a manifold-constrained, matrix-level state evolution, as previewed in~\cref{fig:first}.
+
+The difficulty of this task stems from complex imaging physics and rapid cardiac deformation. \Cref{fig:cha} shows that ultrasound imaging naturally suffers from severe speckle noise, low contrast, and limited spatial resolution, which obscure anatomical boundaries.
+Meanwhile, the heart undergoes rapid non-rigid deformation between systole and diastole, causing pronounced appearance variations.
+Furthermore, clinical datasets typically provide sparse annotations, such as exclusively at the end-diastole (ED) and end-systole (ES) frames, demanding models that can maintain temporal coherence and real-time efficiency under limited supervision.
+
+Existing methods struggle to jointly satisfy these demands.
+Early Convolutional Neural Networks \cite{MICCAI15_UNet,long2015fully} and Transformer-based models \cite{NIPS17_Attention,ICLR21_vit,TMI24_DSA} perform frame-wise prediction, largely ignoring continuous temporal dynamics while remaining computationally heavy.
+Recent video modeling approaches adopt discrete memory retrieval mechanisms \cite{iccv19_stm,neurips21_stm,eccv22_xmem,iccv25_xmempp,cvpr24_cutie,ICLR25_SAM2,CVPR25_DAM,deng2024memsam,MICCAI25_SAMed2}, but their sparse key-frame updates struggle to fully utilize the complete historical information of videos (\cref{fig:first}, top).
+Linear recurrent models (LRM) \cite{katharopoulos_transformers_2020,ICML20_ttt,ICML21_fwp,ICLR25_gdn,ICLR26_ttt_LaCT} offer efficient continuous tracking by compressing historical context into a fixed-size hidden state matrix $\mathbf{S}_t$.
+Under sparse clinical annotations (\eg, only ED/ES frames), the model learns an in-context associative recall mechanism: during inference, it compresses historical observations into $\mathbf{S}_t$ to form implicit anatomical priors, then retrieves these priors using current noisy representations as queries.
+However, existing LRMs rely on unconstrained Euclidean state updates.
+Under severe speckle noise and rapid cardiac deformations, this lack of geometric regularization causes a progressive decay of singular values in $\mathbf{S}_t$.
+This phenomenon, known as rank collapse, progressively degrades the model's associative memory capacity, severing the connection between current observations and historical priors, ultimately leading to long-term tracking inconsistency (\cref{fig:first}, middle).
+
+Beyond the temporal rank collapse, the spatial domain presents its own persistent challenges.
+Although recent methods \cite{deng2024memsam,mm25_echovim,ICCV25_gdkvm} have introduced architectural motifs tailored to ultrasound, these task-specific adaptations primarily focus on spatial feature re-weighting or specific frame sampling, leaving the underlying temporal propagation fundamentally unconstrained.
+Without intrinsic structural regularities, the resulting features lack the necessary anatomical constancy required to distinguish true endocardial boundaries from transient acoustic artifacts.
+This oversight leads to a systemic representation drift where anatomical information is gradually overwhelmed by stochastic speckle noise during long-sequence propagation.
+
+These interwoven limitations motivate us to rethink both spatiotemporal state transitions and domain-specific feature extraction.
+To address this, we propose \textbf{\mymodel}, a unified framework designed to jointly stabilize continuous temporal evolution and enhance anatomy-aware spatial representations.
+By shifting from unconstrained linear recurrence to manifold-constrained nonlinear updates, and by explicitly embedding ultrasound-specific acoustic priors, \mymodel overcomes the core vulnerabilities of temporal rank-collapse and severe speckle interference.
+
+Our main contributions are summarized as follows:
+\begin{itemize}
+    \item We propose \mymodel, a novel architecture designed for echocardiography video segmentation that successfully bridges the gap between temporal tracking stability and ultrasound-domain awareness, enabling robust, long-term cardiac modeling.
+    \item We introduce the \emph{Orthogonalized State Update} (OSU) mechanism. OSU constrains the memory evolution to the Stiefel manifold via an orthogonalized update, effectively preventing rank collapse to ensure numerically stable temporal transitions and preserve complex structural details across the entire cardiac cycle.
+    \item We design the \emph{Anatomical Prior-aware Feature Enhancement} (APFE) module. By reformulating spatial feature extraction as a physics-driven decoupling process, APFE explicitly separates persistent anatomical structures from stochastic speckle interference, providing the downstream temporal tracker with noise-resilient structural anchors.
+    \item Comprehensive experiments on the CAMUS~\cite{tmi19_camus} and EchoNet-Dynamic~\cite{nature20_echodynamic} datasets demonstrate that \mymodel establishes a new state-of-the-art. It significantly improves both segmentation accuracy and temporal stability, while strictly maintaining the real-time inference efficiency required for clinical deployment.
+\end{itemize}

@@ -1,0 +1,22 @@
+\subsection{Comparison with State-of-the-art Methods}
+    \label{subsec:comparisons}
+
+\noindent
+We compared the performance of \mymodel with several state-of-the-art methods on the LV segmentation task.
+As shown in~\cref{tab:type}, these methods employ different sequence modeling paradigms to address the challenges of LV segmentation,
+including vision linear models (PolaFormer~\cite{PolaFormer}, Vision LSTM~\cite{ICLR2025_3b6eaef6}),
+retrieval-based memory approaches (Cutie~\cite{cvpr24_cutie}, SAMed-2~\cite{MICCAI25_SAMed2}),
+linear key-value association methods (LiVOS~\cite{Liu_2025_CVPR}, GDKVM~\cite{ICCV25_gdkvm}),
+and state-space models (EchoVim~\cite{mm25_echovim}, Vivim~\cite{10973086}).
+\mymodel adopts a manifold projection mechanism for stable temporal state evolution.
+
+\noindent
+\textbf{Quantitative results.}
+\Cref{tab:lv_segmentation_comparison} shows that compared to traditional methods, \mymodel, through OSU and APFE, is able to capture deeper information in the temporal context, achieving the optimal balance between segmentation performance and computational cost.
+In practical deployment scenarios, our model achieves \textbf{35~fps}, making real-time clinical segmentation possible.
+
+\noindent
+\textbf{Qualitative results.}
+In~\cref{fig:vis_cap}, to ensure an objective evaluation, we select diverse, representative samples from CAMUS and EchoNet-Dynamic encompassing real-world clinical challenges like varying imaging qualities, acoustic shadowing, and ambiguous boundaries.
+Across these conditions, \mymodel consistently yields more accurate ventricular contours and fewer artifacts than baseline methods.
+The larger yellow overlap regions highlight its superior spatial agreement, demonstrating strong robustness and reliable generalization.

@@ -1,0 +1,7 @@
+\section{Conclusion}
+
+\noindent
+In this paper, we proposed \mymodel, a novel framework designed to address the unique challenges of echocardiography video segmentation, specifically severe speckle noise and rank collapse in linear recurrent models. 
+The core contribution includes two components: OSU, which constrains the memory evolution to the Stiefel manifold via an orthogonalized update to prevent rank collapse and maintain stable temporal transitions; and APFE, which explicitly separates anatomical structures from speckle noise through a physics-driven process, providing noise-resilient structural cues for temporal tracking.
+Extensive experiments on CAMUS and EchoNet-Dynamic demonstrate that \mymodel achieves state-of-the-art segmentation accuracy and temporal stability.
+Additionally, by maintaining real-time inference efficiency, our approach supports ejection fraction estimation and cardiac function assessment for practical clinical deployment.

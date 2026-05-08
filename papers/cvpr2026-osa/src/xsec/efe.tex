@@ -1,0 +1,22 @@
+\section{Clinical Applications}
+      \label{sec:clinical_application}
+
+\noindent 
+The Left Ventricular Ejection Fraction is a critical metric for cardiac function assessment.
+Traditionally, it requires accurate measurement of End-Diastolic Volume ($V_{\text{ED}}$) at peak filling and End-Systolic Volume ($V_{\text{ES}}$) at peak contraction.
+The standard volumetric $\text{LV}_{\text{EF}}$ formula is defined as:
+\begin{equation*}
+   \text{LV}_{\text{EF}} = \frac{V_{\text{ED}} - V_{\text{ES}}}{V_{\text{ED}}} \times 100\%.
+   \label{eq:lvef}
+\end{equation*}
+
+While the Biplane Method of Disks (modified Simpson's rule) is the clinical gold standard for computing these volumes, it requires consistent dual-view data.
+To ensure compatibility with single-view datasets (\eg,~EchoNet-Dynamic) and to directly leverage our automated segmentation framework, we employ a surrogate EF based on 2D area changes:
+\begin{equation*}
+   EF_{area} = \frac{A_{ED} - A_{ES}}{A_{ED}}.
+   \label{eq:ef_area}
+\end{equation*}
+where $A_{ED}$ and $A_{ES}$ denote the segmented Left Ventricular areas at end-diastole and end-systole, respectively.
+This surrogate metric is calculated independently for apical 4-chamber and 2-chamber views without biplane fusion.
+
+By utilizing this area-based approach, our method provides a direct and robust pathway from automated single-view echocardiographic segmentation to actionable diagnostic metrics, enabling efficient and clinically relevant cardiac assessment.

@@ -1,0 +1,35 @@
+\section{Experiments Continued}
+    \label{sec:exp_con}
+
+\noindent 
+\textbf{Segmentation evaluation.} For a fair comparison, the segmentation metrics (mDice, mHD95) reported in~\cref{tab:lv_segmentation_comparison} are evaluated exclusively on the annotated ED and ES frames, consistent with the sparse supervision protocol. 
+
+\noindent
+\textbf{Data and calibration.} All results for the medical metrics in~\cref{tab:lv_segmentation_comparison} are derived from the official CAMUS test subset.
+Notably, we report the raw correlation, bias, and standard deviation without applying any bias-correction or post-calibration techniques to reflect the model's direct predictive performance.
+
+\noindent
+\textbf{Training dynamics and convergence.}
+As illustrated in~\cref{fig:training_progression}, \mymodel exhibits a clear transition in both segmentation accuracy and feature localization.
+In the initial phase (iterations 10--30), the segmentation masks are characterized by coarse boundaries, while the corresponding feature activation maps~(\cref{fig:training_iter10,fig:training_iter20,fig:training_iter30}, bottom rows) show diffused activations across the spatial domain.
+By iteration 1250 (epoch 19), the model produces spatially precise segmentations~(\cref{fig:training_iter1250}), with feature activations concentrated strictly on the target anatomical structures.
+This progression indicates that the training protocol facilitates the transition from global spatial search to fine-grained structural delineation without performance degradation.
+
+\noindent
+\textbf{Temporal consistency analysis.}
+The visualization across the frame sequences in~\cref{fig:training_progression} demonstrates the capacity of the model to maintain temporal stability.
+In the early stages, predictions are temporally inconsistent, with visible fluctuations in mask geometry across frames.
+However, the converged model~(\cref{fig:training_iter1250}) preserves structural identity and boundary continuity throughout the cardiac cycle.
+This stability is attributed to the following mechanisms.
+
+\noindent
+\textbf{Spatiotemporal feature aggregation.} The integration of contextual information from the temporal sequence facilitates the reduction of frame-wise prediction noise by utilizing the temporal evolution of anatomical structures.
+
+\noindent
+\textbf{Gradient propagation.} Backpropagating the loss through the temporal network enforces a consistency constraint on intermediate frames, ensuring that non-annotated frames align with the patterns learned from supervised frames.
+
+\noindent
+\textbf{Sequential context integration.} The refinement of internal representations as the sequence progresses allows the model to utilize cumulative temporal evidence for more accurate boundary localization, effectively correcting initial segmentation noise.
+
+As shown in~\cref{fig:training_progression}, the segmentation quality of intermediate frames without direct supervision remains consistent with the supervised frames.
+This indicates that the architecture effectively enforces temporal consistency and preserves structural identity throughout the sequence.

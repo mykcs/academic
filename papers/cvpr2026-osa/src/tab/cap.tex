@@ -1,0 +1,59 @@
+\begin{table*}[!t]
+    \centering
+    \caption{Comparison of \mymodel with state-of-the-art methods for LV segmentation on the CAMUS~\cite{tmi19_camus} and EchoNet-Dynamic~\cite{nature20_echodynamic} datasets.
+        Metrics include mean Dice coefficient (mDice) and mean 95\% Hausdorff distance (mHD95) for segmentation evaluation, as well as correlation coefficient (corr) and bias$\pm$std (\%) for $\text{LV}_{\text{EF}}$ estimation.}
+    \label{tab:lv_segmentation_comparison}
+
+    \small
+    \setlength{\tabcolsep}{6pt}
+
+    \begin{tabular}{l ccc r@{${}\pm{}$}l ccc r@{${}\pm{}$}l}
+        \toprule
+
+        \textbf{Method} & \multicolumn{5}{c}{\textbf{CAMUS}} & \multicolumn{5}{c}{\textbf{EchoNet-Dynamic}} \\
+        \cmidrule(lr){2-6} \cmidrule(lr){7-11}
+
+        & \textbf{mDice $\uparrow$} & \textbf{mHD95 $\downarrow$} & \textbf{corr $\uparrow$} & \multicolumn{2}{c}{\textbf{bias$\pm$std (\%)}} & \textbf{mDice $\uparrow$} & \textbf{mHD95 $\downarrow$} & \textbf{corr $\uparrow$} & \multicolumn{2}{c}{\textbf{bias$\pm$std (\%)}} \\
+        \midrule
+
+        PolaFormer~\cite{PolaFormer}~\textcolor{gray}{\scriptsize ICLR'25} &
+        92.47 & 3.66 & 0.792 & -0.28 & 7.5 &
+        91.51 & 3.89 & 0.678 & -0.01 & 8.1 \\
+
+        Vision LSTM~\cite{ICLR2025_3b6eaef6}~\textcolor{gray}{\scriptsize ICLR'25} &
+        92.71 & 3.47 & 0.745 & -2.36 & 7.6 &
+        91.71 & 3.85 & 0.691 & -0.37 & 7.9 \\
+
+        Cutie~\cite{cvpr24_cutie}~\textcolor{gray}{\scriptsize CVPR'24} &
+        91.43 & 3.97 & 0.629 &  0.44 & 9.8 &
+        90.44 & 4.05 & 0.600 &  0.40 & 9.6 \\
+
+        LiVOS~\cite{Liu_2025_CVPR}~\textcolor{gray}{\scriptsize CVPR'25} &
+        92.89 & 3.56 & 0.718 & -1.69 & 7.8 &
+        91.92 & 3.82 & 0.702 & -0.04 & 7.5 \\
+        \midrule
+
+        SAMed-2~\cite{MICCAI25_SAMed2}~\textcolor{gray}{\scriptsize MICCAI'25} &
+        93.55 & 3.29 & 0.815 & -2.16 & 6.8 &
+        92.67 & 3.60 & 0.731 & -0.02 & 7.3 \\
+
+        EchoVim~\cite{mm25_echovim}~\textcolor{gray}{\scriptsize ACM MM'25} &
+        94.01 & 3.21 & 0.804 & -0.25 & 7.2 &
+        93.22 & 3.47 & 0.803 & -0.62 & 6.2 \\
+
+        Vivim~\cite{10973086}~\textcolor{gray}{\scriptsize TCSVT'25} &
+        93.36 & 3.45 & 0.817 & -0.09 & 7.3 &
+        92.49 & 3.70 & 0.758 &  1.43 & 7.0 \\
+
+        GDKVM~\cite{ICCV25_gdkvm}~\textcolor{gray}{\scriptsize ICCV'25} &
+        94.18 & 3.31 & 0.835 & -0.71 & 6.7 &
+        93.33 & 3.55 & 0.810 & -0.08 & 6.5 \\
+        \midrule
+
+        \textbf{\mymodel} &
+        \textbf{94.82} & \textbf{3.25} & \textbf{0.830} & \textbf{-0.44} & \textbf{7.0} &
+        \textbf{93.90} & \textbf{3.42} & \textbf{0.816} & \textbf{-1.08} & \textbf{6.0} \\
+
+        \bottomrule
+    \end{tabular}
+\end{table*}

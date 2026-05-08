@@ -1,0 +1,45 @@
+\begin{table}[!t]
+    \centering
+    \setlength{\tabcolsep}{4.5pt}
+    \caption{\textbf{Geometric stability.}
+        MSV/SVVar measure spectral behaviour; OrthE quantifies orthogonality deviation;
+        ColR (\%) is the percentage of steps with $\sigma_{\min}<10^{-3}$.}
+    \label{tab:geo_stability}
+    \begin{tabular}{
+            l
+            S[table-format=1.2]
+            S[table-format=1.2]
+            S[table-format=2.2]
+            S[table-format=2.2]
+        }
+        \toprule
+        Method & {MSV $\downarrow$} & {SVVar $\downarrow$} & {OrthE $\downarrow$} & {ColR $\downarrow$} \\
+        \midrule
+        Baseline      & 6.82 & 1.47 & 21.30 & 91.40 \\
+        w/o Ortho.    & 2.91 & 0.63 & 15.80 & 88.10 \\
+        w/o Spectral  & 3.77 & 1.12 &  9.74 & 41.60 \\
+        \midrule
+        \textbf{Full} & {\textbf{2.00}} & {\textbf{0.00}} & {\textbf{8.48}} & {\textbf{77.78}} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[!t]
+    \centering
+    \setlength{\tabcolsep}{4.5pt}
+    \caption{\textbf{Numerical stability.}
+        GradVar measures gradient variance, UpdateNorm Var quantifies update-scale fluctuations,
+        MeanSV reflects state magnitude, and Drift measures long-horizon deviation.}
+    \label{tab:num_stability}
+    \begin{tabular}{l*{4}{c}}
+        \toprule
+        Method & GVar $\downarrow$ & UpdVar $\downarrow$ & MSV $\downarrow$ & Drift $\downarrow$ \\
+        \midrule
+        Baseline      & 4.7e$^{-3}$ & 1.82 & 6.82 & 91.4 \\
+        w/o WD/RMS    & 1.9e$^{-3}$ & 0.97 & 2.91 & 57.0 \\
+        w/o Spectral  & 8.3e$^{-4}$ & 0.41 & 3.77 & 42.5 \\
+        \midrule
+        \textbf{Full} & \textbf{2.5e$^{-4}$} & \textbf{0.12} & \textbf{2.00} & \textbf{36.0} \\
+        \bottomrule
+    \end{tabular}
+\end{table}

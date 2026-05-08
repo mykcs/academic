@@ -1,0 +1,269 @@
+\begin{thebibliography}{53}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Absil et~al.(2008)Absil, Mahony, and Sepulchre]{PUR08_Absil}
+P.-A. Absil, R. Mahony, and R. Sepulchre.
+\newblock \emph{Optimization Algorithms on Matrix Manifolds}.
+\newblock Princeton University Press, Princeton, NJ, 2008.
+
+\bibitem[Alkin et~al.(2025)Alkin, Beck, P\"{o}ppel, Hochreiter, and Brandstetter]{ICLR2025_3b6eaef6}
+Benedikt Alkin, Maximilian Beck, Korbinian P\"{o}ppel, Sepp Hochreiter, and Johannes Brandstetter.
+\newblock Vision-lstm: xlstm as generic vision backbone.
+\newblock In \emph{International Conference on Representation Learning}, pages 23804--23826, 2025.
+
+\bibitem[Amer et~al.(2021)Amer, Ye, and Janan]{amer2021resdunet}
+Alyaa Amer, Xujiong Ye, and Faraz Janan.
+\newblock Resdunet: A deep learning-based left ventricle segmentation method for echocardiography.
+\newblock \emph{IEEE Access}, 9:\penalty0 159755--159763, 2021.
+
+\bibitem[Arjovsky et~al.(2016)Arjovsky, Shah, and Bengio]{ICML16_urnn}
+Martin Arjovsky, Amar Shah, and Yoshua Bengio.
+\newblock Unitary evolution recurrent neural networks.
+\newblock In \emph{Proceedings of The 33rd International Conference on Machine Learning}, pages 1120--1128, New York, New York, USA, 2016. PMLR.
+
+\bibitem[Bekuzarov et~al.(2023)Bekuzarov, Bermudez, Lee, and Li]{iccv25_xmempp}
+Maksym Bekuzarov, Ariana Bermudez, Joon-Young Lee, and Hao Li.
+\newblock Xmem++: Production-level video segmentation from few annotated frames.
+\newblock In \emph{Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)}, pages 635--644, 2023.
+
+\bibitem[Chen et~al.(2020)Chen, Qin, Qiu, Tarroni, Duan, Bai, and Rueckert]{10.3389/fcvm.2020.00025}
+Chen Chen, Chen Qin, Huaqi Qiu, Giacomo Tarroni, Jinming Duan, Wenjia Bai, and Daniel Rueckert.
+\newblock Deep learning for cardiac image segmentation: A review.
+\newblock \emph{Frontiers in Cardiovascular Medicine}, Volume 7 - 2020, 2020.
+
+\bibitem[Cheng and Schwing(2022)]{eccv22_xmem}
+Ho~Kei Cheng and Alexander~G. Schwing.
+\newblock Xmem: Long-term video object segmentation with an atkinson-shiffrin memory model.
+\newblock In \emph{Computer Vision -- ECCV 2022}, pages 640--658, Cham, 2022. Springer Nature Switzerland.
+
+\bibitem[Cheng et~al.(2021)Cheng, Tai, and Tang]{neurips21_stm}
+Ho~Kei Cheng, Yu-Wing Tai, and Chi-Keung Tang.
+\newblock Rethinking space-time networks with improved memory coverage for efficient video object segmentation.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pages 11781--11794. Curran Associates, Inc., 2021.
+
+\bibitem[Cheng et~al.(2024)Cheng, Oh, Price, Lee, and Schwing]{cvpr24_cutie}
+Ho~Kei Cheng, Seoung~Wug Oh, Brian Price, Joon-Young Lee, and Alexander Schwing.
+\newblock Putting the object back into video object segmentation.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, pages 3151--3161, 2024.
+
+\bibitem[Dao and Gu(2024)]{ICML24_mamba2}
+Tri Dao and Albert Gu.
+\newblock Transformers are {SSM}s: Generalized models and efficient algorithms through structured state space duality.
+\newblock In \emph{Proceedings of the 41st International Conference on Machine Learning}, pages 10041--10071. PMLR, 2024.
+
+\bibitem[Deng et~al.(2024)Deng, Wu, Zeng, and Qin]{deng2024memsam}
+Xiaolong Deng, Huisi Wu, Runhao Zeng, and Jing Qin.
+\newblock Memsam: taming segment anything model for echocardiography video segmentation.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}, pages 9622--9631, 2024.
+
+\bibitem[Dosovitskiy et~al.(2021)Dosovitskiy, Beyer, Kolesnikov, Weissenborn, Zhai, Unterthiner, Dehghani, Minderer, Heigold, Gelly, Uszkoreit, and Houlsby]{ICLR21_vit}
+Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer, Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, and Neil Houlsby.
+\newblock An image is worth 16x16 words: Transformers for image recognition at scale.
+\newblock In \emph{International Conference on Learning Representations}, 2021.
+
+\bibitem[El~Rai et~al.(2022)El~Rai, Darweesh, and Al-Saad]{el2022semi}
+Marwa~Chendeb El~Rai, Muna Darweesh, and Mina Al-Saad.
+\newblock Semi-supervised segmentation of echocardiography videos using graph signal processing.
+\newblock \emph{Electronics}, 11\penalty0 (21):\penalty0 3462, 2022.
+
+\bibitem[Gardner(1988)]{JPA88_sinnm}
+E Gardner.
+\newblock The space of interactions in neural network models.
+\newblock \emph{Journal of Physics A: Mathematical and General}, 21\penalty0 (1):\penalty0 257, 1988.
+
+\bibitem[Gu and Dao(2024)]{CLM24_mamba}
+Albert Gu and Tri Dao.
+\newblock Mamba: Linear-time sequence modeling with selective state spaces.
+\newblock In \emph{First Conference on Language Modeling}, 2024.
+
+\bibitem[Guo and Higham(2006)]{SIAM06_Schur}
+Chun‐Hua Guo and Nicholas~J. Higham.
+\newblock A schur–newton method for the matrix \lowercase{\boldmath p}th root and its inverse.
+\newblock \emph{SIAM Journal on Matrix Analysis and Applications}, 28\penalty0 (3):\penalty0 788--804, 2006.
+
+\bibitem[Guo et~al.(2025)Guo, Chen, Sun, Wu, and Qin]{mm25_echovim}
+Jingxing Guo, Guilian Chen, Yimu Sun, Huisi Wu, and Jing Qin.
+\newblock Echovim: Making vision mamba docile for echocardiography video segmentation via dynamic interaction and semantic token-attentive refinement.
+\newblock In \emph{Proceedings of the 33rd ACM International Conference on Multimedia}, page 3261–3269, New York, NY, USA, 2025. Association for Computing Machinery.
+
+\bibitem[Hazan(2016)]{FTO16_Hazan}
+Elad Hazan.
+\newblock Introduction to online convex optimization.
+\newblock \emph{Foundations and Trends in Optimization}, 2\penalty0 (3-4):\penalty0 157--325, 2016.
+
+\bibitem[He et~al.(2016)He, Zhang, Ren, and Sun]{He_CVPR16_resnet}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun.
+\newblock Deep residual learning for image recognition.
+\newblock In \emph{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}, 2016.
+
+\bibitem[Higham(1986)]{SIAM86_Higham}
+Nicholas~J. Higham.
+\newblock Computing the polar decomposition—with applications.
+\newblock \emph{SIAM Journal on Scientific and Statistical Computing}, 7\penalty0 (4):\penalty0 1160--1174, 1986.
+
+\bibitem[Iannazzo(2006)]{SIAM06_Newton}
+Bruno Iannazzo.
+\newblock On the newton method for the matrix pth root.
+\newblock \emph{SIAM Journal on Matrix Analysis and Applications}, 28\penalty0 (2):\penalty0 503--523, 2006.
+
+\bibitem[Jordan et~al.(2024)Jordan, Jin, Boza, You, Cesista, Newhouse, and Bernstein]{post24_muon}
+Keller Jordan, Yuchen Jin, Vlado Boza, Jiacheng You, Franz Cesista, Laker Newhouse, and Jeremy Bernstein.
+\newblock Muon: An optimizer for hidden layers in neural networks, 2024.
+
+\bibitem[Katharopoulos et~al.(2020)Katharopoulos, Vyas, Pappas, and Fleuret]{katharopoulos_transformers_2020}
+Angelos Katharopoulos, Apoorv Vyas, Nikolaos Pappas, and Fran{\c{c}}ois Fleuret.
+\newblock Transformers are rnns: Fast autoregressive transformers with linear attention.
+\newblock In \emph{Proceedings of the 37th International Conference on Machine Learning, {ICML} 2020, 13-18 July 2020, Virtual Event}, pages 5156--5165. {PMLR}, 2020.
+
+\bibitem[Lang et~al.(2015)Lang, Badano, Mor-Avi, Afilalo, Armstrong, Ernande, Flachskampf, Foster, Goldstein, Kuznetsova, Lancellotti, Muraru, Picard, Rietzschel, Rudski, Spencer, Tsang, and Voigt]{LANG20151}
+Roberto~M. Lang, Luigi~P. Badano, Victor Mor-Avi, Jonathan Afilalo, Anderson Armstrong, Laura Ernande, Frank~A. Flachskampf, Elyse Foster, Steven~A. Goldstein, Tatiana Kuznetsova, Patrizio Lancellotti, Denisa Muraru, Michael~H. Picard, Ernst~R. Rietzschel, Lawrence Rudski, Kirk~T. Spencer, Wendy Tsang, and Jens-Uwe Voigt.
+\newblock Recommendations for cardiac chamber quantification by echocardiography in adults: An update from the american society of echocardiography and the european association of cardiovascular imaging.
+\newblock \emph{Journal of the American Society of Echocardiography}, 28\penalty0 (1):\penalty0 1--39.e14, 2015.
+
+\bibitem[Leclerc et~al.(2019)Leclerc, Smistad, Pedrosa, Østvik, Cervenansky, Espinosa, Espeland, Berg, Jodoin, Grenier, Lartizien, D’hooge, Lovstakken, and Bernard]{tmi19_camus}
+Sarah Leclerc, Erik Smistad, João Pedrosa, Andreas Østvik, Frederic Cervenansky, Florian Espinosa, Torvald Espeland, Erik Andreas~Rye Berg, Pierre-Marc Jodoin, Thomas Grenier, Carole Lartizien, Jan D’hooge, Lasse Lovstakken, and Olivier Bernard.
+\newblock Deep learning for segmentation using an open large-scale dataset in 2d echocardiography.
+\newblock \emph{IEEE Transactions on Medical Imaging}, 38\penalty0 (9):\penalty0 2198--2210, 2019.
+
+\bibitem[Li et~al.(2025)Li, Li, Wang, He, Wang, Wang, and Qiao]{eccv24_videomamba}
+Kunchang Li, Xinhao Li, Yi Wang, Yinan He, Yali Wang, Limin Wang, and Yu Qiao.
+\newblock Videomamba: State space model for efficient video understanding.
+\newblock In \emph{Computer Vision -- ECCV 2024}, pages 237--255, Cham, 2025. Springer Nature Switzerland.
+
+\bibitem[Lin et~al.(2024)Lin, Xie, Kang, and Wu]{TMI24_DSA}
+Jingyin Lin, Wende Xie, Li Kang, and Huisi Wu.
+\newblock Dynamic-guided spatiotemporal attention for echocardiography video segmentation.
+\newblock \emph{IEEE Transactions on Medical Imaging}, 43\penalty0 (11):\penalty0 3843--3855, 2024.
+
+\bibitem[Liu et~al.(2025{\natexlab{a}})Liu, Su, Yao, Jiang, Lai, Du, Qin, Xu, Lu, Yan, Chen, Zheng, Liu, Liu, Yin, He, Zhu, Wang, Wang, Dong, Zhang, Kang, Zhang, Xu, Zhang, Wu, Zhou, and Yang]{arxiv25_kimimuon}
+Jingyuan Liu, Jianlin Su, Xingcheng Yao, Zhejun Jiang, Guokun Lai, Yulun Du, Yidao Qin, Weixin Xu, Enzhe Lu, Junjie Yan, Yanru Chen, Huabin Zheng, Yibo Liu, Shaowei Liu, Bohong Yin, Weiran He, Han Zhu, Yuzhi Wang, Jianzhou Wang, Mengnan Dong, Zheng Zhang, Yongsheng Kang, Hao Zhang, Xinran Xu, Yutao Zhang, Yuxin Wu, Xinyu Zhou, and Zhilin Yang.
+\newblock Muon is scalable for llm training, 2025{\natexlab{a}}.
+
+\bibitem[Liu et~al.(2025{\natexlab{b}})Liu, Wang, Yang, Li, Lin, Niethammer, and Wang]{Liu_2025_CVPR}
+Qin Liu, Jianfeng Wang, Zhengyuan Yang, Linjie Li, Kevin Lin, Marc Niethammer, and Lijuan Wang.
+\newblock Livos: Light video object segmentation with gated linear matching.
+\newblock In \emph{Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR)}, pages 8668--8678, 2025{\natexlab{b}}.
+
+\bibitem[Long et~al.(2015)Long, Shelhamer, and Darrell]{long2015fully}
+Jonathan Long, Evan Shelhamer, and Trevor Darrell.
+\newblock Fully convolutional networks for semantic segmentation.
+\newblock In \emph{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition}, pages 3431--3440, 2015.
+
+\bibitem[Loshchilov and Hutter(2019)]{loshchilov2018decoupled_adamw}
+Ilya Loshchilov and Frank Hutter.
+\newblock Decoupled weight decay regularization.
+\newblock In \emph{International Conference on Learning Representations}, 2019.
+
+\bibitem[Meng et~al.(2025)Meng, Luo, Li, Jiang, and Zhang]{PolaFormer}
+Weikang Meng, Yadan Luo, Xin Li, Dongmei Jiang, and Zheng Zhang.
+\newblock Polaformer: Polarity-aware linear attention for vision transformers.
+\newblock In \emph{International Conference on Representation Learning}, pages 50020--50037, 2025.
+
+\bibitem[Oh et~al.(2019)Oh, Lee, Xu, and Kim]{iccv19_stm}
+Seoung~Wug Oh, Joon-Young Lee, Ning Xu, and Seon~Joo Kim.
+\newblock Video object segmentation using space-time memory networks.
+\newblock In \emph{Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)}, 2019.
+
+\bibitem[Ouyang et~al.(2020)Ouyang, He, Ghorbani, Yuan, Ebinger, Langlotz, Heidenreich, Harrington, Liang, Ashley, et~al.]{nature20_echodynamic}
+David Ouyang, Bryan He, Amirata Ghorbani, Neal Yuan, Joseph Ebinger, Curtis~P Langlotz, Paul~A Heidenreich, Robert~A Harrington, David~H Liang, Euan~A Ashley, et~al.
+\newblock Video-based ai for beat-to-beat assessment of cardiac function.
+\newblock \emph{Nature}, 580\penalty0 (7802):\penalty0 252--256, 2020.
+
+\bibitem[Prados and Kak(1989)]{EL89_nncudr}
+D.L. Prados and S.C. Kak.
+\newblock Neural network capacity using delta rule.
+\newblock \emph{Electronics Letters}, 25:\penalty0 197--199, 1989.
+
+\bibitem[Ravi et~al.(2025)Ravi, Gabeur, Hu, Hu, Ryali, Ma, Khedr, R{\"a}dle, Rolland, Gustafson, Mintun, Pan, Alwala, Carion, Wu, Girshick, Dollar, and Feichtenhofer]{ICLR25_SAM2}
+Nikhila Ravi, Valentin Gabeur, Yuan-Ting Hu, Ronghang Hu, Chaitanya Ryali, Tengyu Ma, Haitham Khedr, Roman R{\"a}dle, Chloe Rolland, Laura Gustafson, Eric Mintun, Junting Pan, Kalyan~Vasudev Alwala, Nicolas Carion, Chao-Yuan Wu, Ross Girshick, Piotr Dollar, and Christoph Feichtenhofer.
+\newblock {SAM} 2: Segment anything in images and videos.
+\newblock In \emph{The Thirteenth International Conference on Learning Representations}, 2025.
+
+\bibitem[Ronneberger et~al.(2015)Ronneberger, Fischer, and Brox]{MICCAI15_UNet}
+Olaf Ronneberger, Philipp Fischer, and Thomas Brox.
+\newblock U-net: Convolutional networks for biomedical image segmentation.
+\newblock In \emph{Medical Image Computing and Computer-Assisted Intervention -- MICCAI 2015}, pages 234--241, Cham, 2015. Springer International Publishing.
+
+\bibitem[Schlag et~al.(2021)Schlag, Irie, and Schmidhuber]{ICML21_fwp}
+Imanol Schlag, Kazuki Irie, and J{\"{u}}rgen Schmidhuber.
+\newblock Linear transformers are secretly fast weight programmers.
+\newblock In \emph{Proceedings of the 38th International Conference on Machine Learning, {ICML} 2021, 18-24 July 2021, Virtual Event}, pages 9355--9366. {PMLR}, 2021.
+
+\bibitem[Schmidhuber(1992)]{nc92_schmidhuber}
+Jürgen Schmidhuber.
+\newblock Learning to control fast-weight memories: {An} alternative to dynamic recurrent networks.
+\newblock \emph{Neural Computation}, 4\penalty0 (1):\penalty0 131--139, 1992.
+
+\bibitem[Sun et~al.(2020)Sun, Wang, Liu, Miller, Efros, and Hardt]{ICML20_ttt}
+Yu Sun, Xiaolong Wang, Zhuang Liu, John Miller, Alexei Efros, and Moritz Hardt.
+\newblock Test-time training with self-supervision for generalization under distribution shifts.
+\newblock In \emph{Proceedings of the 37th International Conference on Machine Learning}, pages 9229--9248. PMLR, 2020.
+
+\bibitem[Sun et~al.(2025)Sun, Li, Dalal, Xu, Vikram, Zhang, Dubois, Chen, Wang, Koyejo, Hashimoto, and Guestrin]{ICML25_ttt}
+Yu Sun, Xinhao Li, Karan Dalal, Jiarui Xu, Arjun Vikram, Genghan Zhang, Yann Dubois, Xinlei Chen, Xiaolong Wang, Sanmi Koyejo, Tatsunori Hashimoto, and Carlos Guestrin.
+\newblock Learning to ({L}earn at test time): {RNN}s with expressive hidden states.
+\newblock In \emph{Proceedings of the 42nd International Conference on Machine Learning}, pages 57503--57522. PMLR, 2025.
+
+\bibitem[Team et~al.(2025)Team, Zhang, Lin, Yao, Hu, Meng, Liu, Men, Yang, Li, Li, Lu, Liu, Chen, Xu, Yu, Wang, Fan, Zhong, Yuan, Zhang, Zhang, Liu, Wang, Fang, He, Liu, Li, Su, Qiu, Pang, Yan, Jiang, Huang, Yin, You, Wei, Wang, Hong, Chen, Chen, Wang, Zheng, Wang, Liu, Dong, Zhang, Pan, Wu, Wu, Guan, Tao, Fu, Xu, Wang, Lai, Wu, Zhou, Yang, and Du]{arxiv25_kimidelta}
+Kimi Team, Yu Zhang, Zongyu Lin, Xingcheng Yao, Jiaxi Hu, Fanqing Meng, Chengyin Liu, Xin Men, Songlin Yang, Zhiyuan Li, Wentao Li, Enzhe Lu, Weizhou Liu, Yanru Chen, Weixin Xu, Longhui Yu, Yejie Wang, Yu Fan, Longguang Zhong, Enming Yuan, Dehao Zhang, Yizhi Zhang, T.~Y. Liu, Haiming Wang, Shengjun Fang, Weiran He, Shaowei Liu, Yiwei Li, Jianlin Su, Jiezhong Qiu, Bo Pang, Junjie Yan, Zhejun Jiang, Weixiao Huang, Bohong Yin, Jiacheng You, Chu Wei, Zhengtao Wang, Chao Hong, Yutian Chen, Guanduo Chen, Yucheng Wang, Huabin Zheng, Feng Wang, Yibo Liu, Mengnan Dong, Zheng Zhang, Siyuan Pan, Wenhao Wu, Yuhao Wu, Longyu Guan, Jiawen Tao, Guohong Fu, Xinran Xu, Yuzhi Wang, Guokun Lai, Yuxin Wu, Xinyu Zhou, Zhilin Yang, and Yulun Du.
+\newblock Kimi linear: An expressive, efficient attention architecture, 2025.
+
+\bibitem[Tian and Cohen(2017)]{8265568}
+Qi-Chong Tian and Laurent~D. Cohen.
+\newblock Global and local contrast adaptive enhancement for non-uniform illumination color images.
+\newblock In \emph{2017 IEEE International Conference on Computer Vision Workshops (ICCVW)}, pages 3023--3030, 2017.
+
+\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin]{NIPS17_Attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan~N Gomez, \L~ukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need.
+\newblock In \emph{Advances in Neural Information Processing Systems}. Curran Associates, Inc., 2017.
+
+\bibitem[Videnovic et~al.(2025)Videnovic, Lukezic, and Kristan]{CVPR25_DAM}
+Jovana Videnovic, Alan Lukezic, and Matej Kristan.
+\newblock A distractor-aware memory for visual object tracking with sam2.
+\newblock In \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, pages 24255--24264, 2025.
+
+\bibitem[Wang et~al.(2025{\natexlab{a}})Wang, Shi, and Fox]{arxiv25_ttregression}
+Ke~Alexander Wang, Jiaxin Shi, and Emily~B. Fox.
+\newblock Test-time regression: a unifying framework for designing sequence models with associative memory, 2025{\natexlab{a}}.
+
+\bibitem[Wang et~al.(2025{\natexlab{b}})Wang, Sun, Guo, Wu, and Qin]{ICCV25_gdkvm}
+Rui Wang, Yimu Sun, Jingxing Guo, Huisi Wu, and Jing Qin.
+\newblock {GDKVM}: Echocardiography video segmentation via spatiotemporal key-value memory with gated delta rule.
+\newblock In \emph{Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)}, pages 12191--12200, 2025{\natexlab{b}}.
+
+\bibitem[Wang et~al.(2019)Wang, Chen, Yuan, and Wu]{WANG201925}
+Wencheng Wang, Zhenxue Chen, Xiaohui Yuan, and Xiaojin Wu.
+\newblock Adaptive image enhancement method for correcting low-illumination images.
+\newblock \emph{Information Sciences}, 496:\penalty0 25--41, 2019.
+
+\bibitem[Wisdom et~al.(2016)Wisdom, Powers, Hershey, Le~Roux, and Atlas]{NIPS16_fullurnn}
+Scott Wisdom, Thomas Powers, John Hershey, Jonathan Le~Roux, and Les Atlas.
+\newblock Full-capacity unitary recurrent neural networks.
+\newblock In \emph{Advances in Neural Information Processing Systems}. Curran Associates, Inc., 2016.
+
+\bibitem[Yan et~al.(2025)Yan, Song, Song, Li, Zhou, Sun, Chen, Kim, Ren, Liu, Li, Li, He, and Sun]{MICCAI25_SAMed2}
+Zhiling Yan, Sifan Song, Dingjie Song, Yiwei Li, Rong Zhou, Weixiang Sun, Zhennong Chen, Sekeun Kim, Hui Ren, Tianming Liu, Quanzheng Li, Xiang Li, Lifang He, and Lichao Sun.
+\newblock { SAMed-2: Selective Memory Enhanced Medical Segment Anything Model }.
+\newblock In \emph{proceedings of Medical Image Computing and Computer Assisted Intervention -- MICCAI 2025}. Springer Nature Switzerland, 2025.
+
+\bibitem[Yang et~al.(2025{\natexlab{a}})Yang, Kautz, and Hatamizadeh]{ICLR25_gdn}
+Songlin Yang, Jan Kautz, and Ali Hatamizadeh.
+\newblock Gated delta networks: Improving mamba2 with delta rule.
+\newblock In \emph{International Conference on Representation Learning}, pages 29687--29707, 2025{\natexlab{a}}.
+
+\bibitem[Yang et~al.(2025{\natexlab{b}})Yang, Xing, Yu, Fu, Huang, and Zhu]{10973086}
+Yijun Yang, Zhaohu Xing, Lequan Yu, Huazhu Fu, Chunwang Huang, and Lei Zhu.
+\newblock Vivim: A video vision mamba for ultrasound video segmentation.
+\newblock \emph{IEEE Transactions on Circuits and Systems for Video Technology}, 35\penalty0 (10):\penalty0 10293--10304, 2025{\natexlab{b}}.
+
+\bibitem[Zhang et~al.(2026)Zhang, Bi, Hong, Zhang, Luan, Yang, Sunkavalli, Freeman, and Tan]{ICLR26_ttt_LaCT}
+Tianyuan Zhang, Sai Bi, Yicong Hong, Kai Zhang, Fujun Luan, Songlin Yang, Kalyan Sunkavalli, William~T. Freeman, and Hao Tan.
+\newblock Test-time training done right.
+\newblock In \emph{The Fourteenth International Conference on Learning Representations}, 2026.
+
+\end{thebibliography}

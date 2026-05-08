@@ -1,0 +1,42 @@
+\clearpage
+\setcounter{page}{1}
+\def\theHpage{Supplement.\arabic{page}}
+\renewcommand{\thepage}{A.\arabic{page}}
+\maketitlesupplementary
+
+\appendix
+
+\setcounter{section}{0}
+\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\theHsection}{\Alph{section}}
+
+\crefname{section}{Appendix}{Appendices}
+\Crefname{section}{Appendix}{Appendices}
+\crefname{subsection}{Appendix}{Appendices}
+\Crefname{subsection}{Appendix}{Appendices}
+\setcounter{table}{0}
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\renewcommand{\thetable}{A.\arabic{table}}
+\renewcommand{\theequation}{A.\arabic{equation}}
+\renewcommand{\thefigure}{A.\arabic{figure}}
+\renewcommand{\theHtable}{A.\arabic{table}}
+\renewcommand{\theHequation}{A.\arabic{equation}}
+\renewcommand{\theHfigure}{A.\arabic{figure}}
+
+\addcontentsline{toc}{part}{Appendix} 
+\startcontents[supp]
+\printcontents[supp]{l}{1}{
+    \subsection*{Contents}
+    \setcounter{tocdepth}{2}
+}
+
+% ------
+\input{xsec/vis_com_osu}
+                \input{fig/landscape/landscape}
+\input{xsec/problem_setting}
+\input{xsec/exp_con}
+                \input{fig/train_step/train_step}
+\input{xsec/efe}
+\input{xsec/temporal_consistency}
+% \input{xsec/rw_video_0}

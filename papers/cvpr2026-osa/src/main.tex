@@ -1,0 +1,92 @@
+% CVPR 2026 Paper Template; see https://github.com/cvpr-org/author-kit
+
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+% self add
+\usepackage{comment}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{booktabs,multirow,float,graphicx,subcaption}
+\usepackage{mathtools}
+\usepackage{siunitx}
+\sisetup{
+    reset-text-series=false,
+    text-series-to-math=true,
+    % detect-inline-weight=math,
+    table-number-alignment=center
+}
+\usepackage[accsupp]{axessibility}
+
+%%%%%%%%% PAPER TYPE  - PLEASE UPDATE FOR FINAL VERSION
+% \usepackage{cvpr}              % To produce the CAMERA-READY version
+% \usepackage[review]{cvpr}      % To produce the REVIEW version
+\usepackage[pagenumbers]{cvpr} % To force page numbers, e.g. for an arXiv version
+
+% Import additional packages in the preamble file, before hyperref
+\input{preamble}
+
+% It is strongly recommended to use hyperref, especially for the review version.
+% hyperref with option pagebackref eases the reviewers' job.
+% Please disable hyperref *only* if you encounter grave issues, 
+% e.g. with the file validation for the camera-ready version.
+%
+% If you comment hyperref and then uncomment it, you should delete *.aux before re-running LaTeX.
+% (Or just hit 'q' on the first LaTeX run, let it finish, and you should be clear).
+\definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
+\definecolor{red}{rgb}{0.69, 0.0, 0.0}
+\newcommand{\rev}[1]{{\color{BrickRed}#1}}
+\usepackage[pagebackref,breaklinks,colorlinks,allcolors=cvprblue]{hyperref}
+
+%%%%%%%%% PAPER ID  - PLEASE UPDATE
+\def\paperID{***} % *** Enter the Paper ID here
+\def\confName{CVPR}
+\def\confYear{2026}
+
+%%%%%%%%% TITLE - PLEASE UPDATE
+\title{
+\mymodel: Echocardiography Video Segmentation via \\ OrthogonalizedState Update and Anatomical Prior-aware Feature Enhancement
+}
+% OSA: Echocardiography Video Segmentation via Orthogonalized State Update and Anatomical Prior-aware Feature Enhancement
+
+%%%%%%%%% AUTHORS - PLEASE UPDATE
+\input{sec/author}
+
+\begin{document}
+
+\maketitle
+\input{sec/0_abstract}
+                \input{fig/first/first}
+\input{sec/1_intro}
+                \input{fig/challenge/cha}
+                \input{fig/Met/architecture}
+\input{sec/2_0_related}
+\input{sec/3_0_method}
+    \input{sec/3_1_OSU}
+                \input{tab/cap}
+    \input{sec/3_2_APFE}
+\input{sec/4_0_exp}
+                \input{tab/type}
+                \input{fig/Exp/vis_cap}
+    \input{sec/4_2_0_com_sota}
+                \input{tab/abl}
+                \input{fig/abl/abl}
+                
+    \input{sec/4_3_0_abl}
+
+\input{sec/5_limitations}
+                \input{fig/fail/fail.tex}
+\input{sec/6_conclusion}
+\input{sec/ackn}
+
+{
+    \small
+    \bibliographystyle{ieeenat_fullname}
+    \bibliography{main}
+}
+
+% WARNING: do not forget to delete the supplementary pages from your submission 
+\input{xsec/X_suppl}
+
+% \clearpage
+% \input{sec_re/re}
+
+\end{document}
