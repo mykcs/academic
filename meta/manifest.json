@@ -1,157 +1,192 @@
 [
   {
-    "source": "arXiv-2603.26188v1/fig/abl/fig_abl.png",
-    "dest": "images/papers/cvpr2026-osa/fig/abl/fig_abl.png",
-    "size": 1139025
+    "source": "README.md",
+    "dest": "README.md",
+    "size": 1383
   },
   {
-    "source": "arXiv-2603.26188v1/fig/apfe/fig_apfe.png",
-    "dest": "images/papers/cvpr2026-osa/fig/apfe/fig_apfe.png",
-    "size": 179507
+    "source": ".gitignore",
+    "dest": ".gitignore",
+    "size": 16
   },
   {
-    "source": "arXiv-2603.26188v1/fig/fail/fig_fail.png",
-    "dest": "images/papers/cvpr2026-osa/fig/fail/fig_fail.png",
-    "size": 894152
+    "source": "images/papers/iccv2025-gdkvm/gdkvm.png",
+    "dest": "images/papers/iccv2025-gdkvm/gdkvm.png",
+    "size": 67274
   },
   {
-    "source": "arXiv-2603.26188v1/fig/first/fig_first.png",
-    "dest": "images/papers/cvpr2026-osa/fig/first/fig_first.png",
-    "size": 276471
-  },
-  {
-    "source": "arXiv-2603.26188v1/fig/Met/fig_overview.png",
-    "dest": "images/papers/cvpr2026-osa/fig/Met/fig_overview.png",
-    "size": 366520
-  },
-  {
-    "source": "arXiv-2603.26188v1/fig/landscape_2d/image.png",
-    "dest": "images/papers/cvpr2026-osa/fig/landscape_2d/image.png",
-    "size": 500455
-  },
-  {
-    "source": "arXiv-2603.26188v1/fig/osu/fig_osu.png",
-    "dest": "images/papers/cvpr2026-osa/fig/osu/fig_osu.png",
-    "size": 174985
-  },
-  {
-    "source": "arXiv-2603.26188v1/fig/landscape/fig_landscape.png",
-    "dest": "images/papers/cvpr2026-osa/fig/landscape/fig_landscape.png",
-    "size": 492831
-  },
-  {
-    "source": "arXiv-2603.26188v1/fig/challenge/image.png",
-    "dest": "images/papers/cvpr2026-osa/fig/challenge/image.png",
-    "size": 430199
-  },
-  {
-    "source": "arXiv-2603.26188v1/fig/Exp/image.png",
-    "dest": "images/papers/cvpr2026-osa/fig/Exp/image.png",
-    "size": 2015602
-  },
-  {
-    "source": "arXiv-2603.26188v1/tab/tab_cap.png",
-    "dest": "images/papers/cvpr2026-osa/tab/tab_cap.png",
-    "size": 254956
-  },
-  {
-    "source": "arXiv-2603.26188v1/tab/tab_abl.png",
-    "dest": "images/papers/cvpr2026-osa/tab/tab_abl.png",
-    "size": 64874
-  },
-  {
-    "source": "astro/public/paper/iccv25_gdkvm/fig_gdkvm_page-0001.jpg",
+    "source": "images/papers/iccv2025-gdkvm/fig_gdkvm_page-0001.jpg",
     "dest": "images/papers/iccv2025-gdkvm/fig_gdkvm_page-0001.jpg",
     "size": 301592
   },
   {
-    "source": "astro/public/paper/iccv25_gdkvm/arXiv-2512.10252v1/fig/abl/image.png",
+    "source": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/abl/image.png",
     "dest": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/abl/image.png",
     "size": 2534106
   },
   {
-    "source": "astro/public/paper/iccv25_gdkvm/arXiv-2512.10252v1/fig/fail/image.png",
+    "source": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/fail/image.png",
     "dest": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/fail/image.png",
     "size": 2061727
   },
   {
-    "source": "astro/public/paper/iccv25_gdkvm/arXiv-2512.10252v1/fig/LV-BA/lr_echo.png",
+    "source": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/LV-BA/lr_echo.png",
     "dest": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/LV-BA/lr_echo.png",
     "size": 717562
   },
   {
-    "source": "astro/public/paper/iccv25_gdkvm/arXiv-2512.10252v1/fig/LV-BA/lr_camus.png",
+    "source": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/LV-BA/lr_camus.png",
     "dest": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/LV-BA/lr_camus.png",
     "size": 530895
   },
   {
-    "source": "astro/public/paper/iccv25_gdkvm/arXiv-2512.10252v1/fig/challenge/cha_2.jpg",
+    "source": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_2.jpg",
     "dest": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_2.jpg",
     "size": 27793
   },
   {
-    "source": "astro/public/paper/iccv25_gdkvm/arXiv-2512.10252v1/fig/challenge/cha_3.jpg",
+    "source": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_3.jpg",
     "dest": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_3.jpg",
     "size": 32094
   },
   {
-    "source": "astro/public/paper/iccv25_gdkvm/arXiv-2512.10252v1/fig/challenge/cha_1.jpg",
+    "source": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_1.jpg",
     "dest": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_1.jpg",
     "size": 34459
   },
   {
-    "source": "astro/public/paper/iccv25_gdkvm/arXiv-2512.10252v1/fig/challenge/cha_4.jpg",
+    "source": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_4.jpg",
     "dest": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_4.jpg",
     "size": 29356
   },
   {
-    "source": "astro/public/paper/iccv25_gdkvm/arXiv-2512.10252v1/fig/challenge/cha_5.jpg",
+    "source": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_5.jpg",
     "dest": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_5.jpg",
     "size": 31355
   },
   {
-    "source": "astro/public/paper/iccv25_gdkvm/arXiv-2512.10252v1/fig/challenge/cha_6.jpg",
+    "source": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_6.jpg",
     "dest": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_6.jpg",
     "size": 31685
   },
   {
-    "source": "astro/public/paper/iccv25_gdkvm/arXiv-2512.10252v1/fig/Exp/cap.png",
+    "source": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/Exp/cap.png",
     "dest": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/Exp/cap.png",
     "size": 2985175
   },
   {
-    "source": "astro/public/paper/iccv25_gdkvm/arXiv-2512.10252v1/fig/Exp/cap_echo.png",
+    "source": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/Exp/cap_echo.png",
     "dest": "images/papers/iccv2025-gdkvm/arXiv-2512.10252v1/fig/Exp/cap_echo.png",
     "size": 970566
   },
   {
-    "source": "astro/public/polyu.svg",
-    "dest": "images/logos/polyu.svg",
-    "size": 1109
+    "source": "images/papers/cvpr2026-osa/fig_osu_page-0001.jpg",
+    "dest": "images/papers/cvpr2026-osa/fig_osu_page-0001.jpg",
+    "size": 234912
   },
   {
-    "source": "astro/public/szu.svg",
-    "dest": "images/logos/szu.svg",
-    "size": 31651
+    "source": "images/papers/cvpr2026-osa/fig/abl/fig_abl.png",
+    "dest": "images/papers/cvpr2026-osa/fig/abl/fig_abl.png",
+    "size": 1139025
   },
   {
-    "source": "astro/src/assets/paper/iccv_logo.png",
-    "dest": "images/logos/iccv.png",
-    "size": 41556
+    "source": "images/papers/cvpr2026-osa/fig/apfe/fig_apfe.png",
+    "dest": "images/papers/cvpr2026-osa/fig/apfe/fig_apfe.png",
+    "size": 179507
   },
   {
-    "source": "astro/src/assets/paper/logos/cvpr-navbar-logo (1).svg",
+    "source": "images/papers/cvpr2026-osa/fig/fail/fig_fail.png",
+    "dest": "images/papers/cvpr2026-osa/fig/fail/fig_fail.png",
+    "size": 894152
+  },
+  {
+    "source": "images/papers/cvpr2026-osa/fig/first/fig_first.png",
+    "dest": "images/papers/cvpr2026-osa/fig/first/fig_first.png",
+    "size": 276471
+  },
+  {
+    "source": "images/papers/cvpr2026-osa/fig/Met/fig_overview.png",
+    "dest": "images/papers/cvpr2026-osa/fig/Met/fig_overview.png",
+    "size": 366520
+  },
+  {
+    "source": "images/papers/cvpr2026-osa/fig/landscape_2d/image.png",
+    "dest": "images/papers/cvpr2026-osa/fig/landscape_2d/image.png",
+    "size": 500455
+  },
+  {
+    "source": "images/papers/cvpr2026-osa/fig/osu/fig_osu.png",
+    "dest": "images/papers/cvpr2026-osa/fig/osu/fig_osu.png",
+    "size": 174985
+  },
+  {
+    "source": "images/papers/cvpr2026-osa/fig/landscape/fig_landscape.png",
+    "dest": "images/papers/cvpr2026-osa/fig/landscape/fig_landscape.png",
+    "size": 492831
+  },
+  {
+    "source": "images/papers/cvpr2026-osa/fig/challenge/image.png",
+    "dest": "images/papers/cvpr2026-osa/fig/challenge/image.png",
+    "size": 430199
+  },
+  {
+    "source": "images/papers/cvpr2026-osa/fig/Exp/image.png",
+    "dest": "images/papers/cvpr2026-osa/fig/Exp/image.png",
+    "size": 2015602
+  },
+  {
+    "source": "images/papers/cvpr2026-osa/tab/tab_cap.png",
+    "dest": "images/papers/cvpr2026-osa/tab/tab_cap.png",
+    "size": 254956
+  },
+  {
+    "source": "images/papers/cvpr2026-osa/tab/tab_abl.png",
+    "dest": "images/papers/cvpr2026-osa/tab/tab_abl.png",
+    "size": 64874
+  },
+  {
+    "source": "images/logos/cvpr.svg",
     "dest": "images/logos/cvpr.svg",
     "size": 14254
   },
   {
-    "source": "astro/public/images/avatar.png",
+    "source": "images/logos/polyu.svg",
+    "dest": "images/logos/polyu.svg",
+    "size": 1109
+  },
+  {
+    "source": "images/logos/szu.svg",
+    "dest": "images/logos/szu.svg",
+    "size": 31651
+  },
+  {
+    "source": "images/logos/iccv.png",
+    "dest": "images/logos/iccv.png",
+    "size": 41556
+  },
+  {
+    "source": "images/avatar/avatar.png",
     "dest": "images/avatar/avatar.png",
     "size": 66334
   },
   {
-    "source": "astro/public/images/gdkvm.png",
-    "dest": "images/papers/iccv2025-gdkvm/gdkvm.png",
-    "size": 67274
+    "source": "scripts/sync.py",
+    "dest": "scripts/sync.py",
+    "size": 1787
+  },
+  {
+    "source": ".omc/state/last-tool-error.json",
+    "dest": ".omc/state/last-tool-error.json",
+    "size": 602
+  },
+  {
+    "source": ".omc/state/hud-stdin-cache.json",
+    "dest": ".omc/state/hud-stdin-cache.json",
+    "size": 928
+  },
+  {
+    "source": ".omc/state/sessions/1cdadbf8-b732-481b-a62b-ad18d15951aa/hud-state.json",
+    "dest": ".omc/state/sessions/1cdadbf8-b732-481b-a62b-ad18d15951aa/hud-state.json",
+    "size": 180
   }
 ]
