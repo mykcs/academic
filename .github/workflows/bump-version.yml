@@ -6,6 +6,15 @@ on:
       - main
   workflow_dispatch:
 
+# Prevent concurrent runs from racing on tag creation/push.
+# Group key uses ref so main and feature branches don't block each other.
+concurrency:
+  group: bump-version-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
 jobs:
   bump:
     runs-on: ubuntu-latest
@@ -13,8 +22,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Pre-bump guard (no destructive uncommitted deletions)
+        id: preflight
+        run: |
+          set -euo pipefail
+          # Fail if there are uncommitted deletions of tracked files.
+          # This prevents tagging a broken state where files were removed locally
+          # but not yet committed.
+          if git status --porcelain | grep -E '^( D|D ) ' >/dev/null 2>&1; then
+            echo "::error::Uncommitted destructive deletions detected in working tree."
+            echo "::error::Resolve them (commit or restore) before bumping the version tag."
+            git status --short | grep -E '^( D|D ) ' || true
+            exit 1
+          fi
+          echo "preflight=ok" >> "$GITHUB_OUTPUT"
+
       - name: Get latest v1.x.y tag
         id: latest_tag
+        if: steps.preflight.outputs.preflight == 'ok'
         run: |
           git fetch --tags
           LATEST=$(git describe --tags --match='v1.*' 2>/dev/null || echo "v1.0.0")
@@ -22,12 +47,14 @@ jobs:
 
       - name: Bump version
         id: bump
+        if: steps.preflight.outputs.preflight == 'ok'
         run: |
+          set -euo pipefail
           CURRENT=${{ steps.latest_tag.outputs.latest }}
           # Extract major.minor.patch
-          MAJOR=$(echo $CURRENT | cut -d. -f1)
-          MINOR=$(echo $CURRENT | cut -d. -f2)
-          PATCH=$(echo $CURRENT | cut -d. -f3 | cut -d- -f1)
+          MAJOR=$(echo "$CURRENT" | cut -d. -f1)
+          MINOR=$(echo "$CURRENT" | cut -d. -f2)
+          PATCH=$(echo "$CURRENT" | cut -d. -f3 | cut -d- -f1)
           # Increment patch
           PATCH=$((PATCH + 1))
           NEW_TAG="${MAJOR}.${MINOR}.${PATCH}"
@@ -37,13 +64,17 @@ jobs:
       - name: Create and push tag
         if: steps.bump.outputs.new_tag != steps.bump.outputs.old_tag
         run: |
-          git tag ${{ steps.bump.outputs.new_tag }}
-          git push origin ${{ steps.bump.outputs.new_tag }}
+          git tag "${{ steps.bump.outputs.new_tag }}"
+          git push origin "${{ steps.bump.outputs.new_tag }}"
 
       - name: Update v1 tag to latest
+        if: steps.bump.outputs.new_tag != steps.bump.outputs.old_tag
         run: |
-          # Move v1 to point to the newly created tag
+          # Move v1 to point to the newly created tag.
+          # NOTE: jsDelivr caches the 301 redirect for @v1; force-push takes
+          # 30s-5min to propagate. Consumers should pin explicit @v1.x.y tags
+          # rather than relying on the moving @v1 tag.
           git tag -d v1
           git push origin :refs/tags/v1
-          git tag v1 ${{ steps.bump.outputs.new_tag }}
+          git tag v1 "${{ steps.bump.outputs.new_tag }}"
           git push origin v1
