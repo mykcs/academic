@@ -25,6 +25,11 @@
     "size": 66334
   },
   {
+    "source": "images/icons/translate.svg",
+    "dest": "images/icons/translate.svg",
+    "size": 3175
+  },
+  {
     "source": "images/logos/cvpr.svg",
     "dest": "images/logos/cvpr.svg",
     "size": 14254
@@ -115,84 +120,14 @@
     "size": 254956
   },
   {
-    "source": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/Exp/cap.png",
-    "dest": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/Exp/cap.png",
-    "size": 2985175
-  },
-  {
-    "source": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/Exp/cap_echo.png",
-    "dest": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/Exp/cap_echo.png",
-    "size": 970566
-  },
-  {
-    "source": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/LV-BA/lr_camus.png",
-    "dest": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/LV-BA/lr_camus.png",
-    "size": 530895
-  },
-  {
-    "source": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/LV-BA/lr_echo.png",
-    "dest": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/LV-BA/lr_echo.png",
-    "size": 717562
-  },
-  {
-    "source": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/abl/image.png",
-    "dest": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/abl/image.png",
-    "size": 2534106
-  },
-  {
-    "source": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_1.jpg",
-    "dest": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_1.jpg",
-    "size": 34459
-  },
-  {
-    "source": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_2.jpg",
-    "dest": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_2.jpg",
-    "size": 27793
-  },
-  {
-    "source": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_3.jpg",
-    "dest": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_3.jpg",
-    "size": 32094
-  },
-  {
-    "source": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_4.jpg",
-    "dest": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_4.jpg",
-    "size": 29356
-  },
-  {
-    "source": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_5.jpg",
-    "dest": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_5.jpg",
-    "size": 31355
-  },
-  {
-    "source": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_6.jpg",
-    "dest": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/challenge/cha_6.jpg",
-    "size": 31685
-  },
-  {
-    "source": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/fail/image.png",
-    "dest": "images/publications/iccv2025-gdkvm/arXiv-2512.10252v1/fig/fail/image.png",
-    "size": 2061727
-  },
-  {
-    "source": "images/publications/iccv2025-gdkvm/fig_gdkvm_page-0001.jpg",
-    "dest": "images/publications/iccv2025-gdkvm/fig_gdkvm_page-0001.jpg",
-    "size": 301592
-  },
-  {
-    "source": "images/publications/iccv2025-gdkvm/gdkvm.png",
-    "dest": "images/publications/iccv2025-gdkvm/gdkvm.png",
-    "size": 67274
-  },
-  {
     "source": "meta/image-map.json",
     "dest": "meta/image-map.json",
-    "size": 1739
+    "size": 1573
   },
   {
     "source": "meta/manifest.json",
     "dest": "meta/manifest.json",
-    "size": 15436
+    "size": 11361
   },
   {
     "source": "papers/cvpr2026-osa/slides/slide_01.png",
@@ -455,9 +390,19 @@
     "size": 2209
   },
   {
+    "source": "scripts/generate-manifest.py",
+    "dest": "scripts/generate-manifest.py",
+    "size": 5305
+  },
+  {
+    "source": "scripts/smart-autopush.sh",
+    "dest": "scripts/smart-autopush.sh",
+    "size": 17677
+  },
+  {
     "source": "scripts/sync.py",
     "dest": "scripts/sync.py",
-    "size": 1787
+    "size": 2606
   },
   {
     "source": "transcripts/gpa-transcript.pdf",
