@@ -68,14 +68,22 @@ def _build_entries(repo_root: Path) -> List[ManifestEntry]:
         if _is_excluded(rel_path):
             continue
         full_path = repo_root / rel_path
-        if not full_path.is_file():
-            # Symlinks to directories or broken symlinks: skip silently.
-            continue
+        # Use lstat (not stat) so symlinks report their OWN size (target path
+        # length), not the target file's size. Otherwise manifest content
+        # depends on whether the symlink target exists on the current host,
+        # causing CI/local drift (e.g. scripts/smart-autopush.sh → absolute
+        # path only valid on author's machine).
         try:
-            size = full_path.stat().st_size
+            st = full_path.lstat()
         except OSError:
             continue
-        entries.append({"source": rel_path, "dest": rel_path, "size": size})
+        import stat as _stat
+        # Include regular files and symlinks. Skip directories, broken
+        # devices, etc. — git tracks symlinks (mode 120000) as first-class
+        # entries, so they must appear in the manifest on every host.
+        if not (_stat.S_ISREG(st.st_mode) or _stat.S_ISLNK(st.st_mode)):
+            continue
+        entries.append({"source": rel_path, "dest": rel_path, "size": st.st_size})
     return entries
 
 
