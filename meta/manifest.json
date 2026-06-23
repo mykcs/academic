@@ -142,7 +142,7 @@
   {
     "source": "meta/manifest.json",
     "dest": "meta/manifest.json",
-    "size": 11535
+    "size": 11711
   },
   {
     "source": "papers/cvpr2026-osa/slides/slide_01.png",
