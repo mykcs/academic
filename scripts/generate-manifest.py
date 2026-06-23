@@ -37,7 +37,34 @@ REPO_ROOT = SCRIPT_DIR.parent
 MANIFEST_PATH = REPO_ROOT / "meta" / "manifest.json"
 
 # Paths to exclude from the manifest. These are repo-internal / derived.
-EXCLUDED_PREFIXES = (".git/", ".omc/", ".github/")
+# Default fallback when `.manifestignore` is absent.
+DEFAULT_EXCLUDED_PREFIXES = (".git/", ".omc/", ".github/")
+MANIFESTIGNORE_PATH = REPO_ROOT / ".manifestignore"
+
+
+def _load_excluded_prefixes() -> tuple:
+    """Load exclusion prefixes from `.manifestignore` if present,
+    otherwise fall back to ``DEFAULT_EXCLUDED_PREFIXES``.
+
+    `.manifestignore` uses gitignore-style lines (one path per line).
+    Blank lines and lines starting with ``#`` are ignored. Trailing
+    slashes are preserved so prefix matching stays consistent with the
+    hardcoded fallback (``".git/"`` matches ``.git/HEAD`` but not
+    ``.github/workflows/...``).
+    """
+    if not MANIFESTIGNORE_PATH.exists():
+        return DEFAULT_EXCLUDED_PREFIXES
+    prefixes = []
+    with open(MANIFESTIGNORE_PATH) as f:
+        for raw in f:
+            line = raw.strip()
+            if not line or line.startswith("#"):
+                continue
+            prefixes.append(line)
+    return tuple(prefixes) if prefixes else DEFAULT_EXCLUDED_PREFIXES
+
+
+EXCLUDED_PREFIXES = _load_excluded_prefixes()
 
 
 class ManifestEntry(TypedDict):

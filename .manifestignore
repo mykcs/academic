@@ -1,0 +1,13 @@
+# .manifestignore — Paths excluded from meta/manifest.json
+# (gitignore-style format: one path per line, relative to repo root)
+#
+# Read by scripts/generate-manifest.py. Add new repo-internal / derived
+# directories here so they do not show up in the asset manifest consumed
+# by sync.py.
+#
+# If this file is absent, generate-manifest.py falls back to its built-in
+# defaults (.git/, .omc/, .github/).
+
+.git/
+.omc/
+.github/
