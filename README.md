@@ -53,3 +53,8 @@ git submodule add https://github.com/mykcs/academic.git vendor/academic
 2. Update `meta/manifest.json`
 3. Commit and push
 4. Consumers re-run sync
+
+## Repository Size
+
+Total repo size is ~13 MB — large PNG figures are tracked directly in git
+(no Git LFS). See `.gitattributes` for binary asset markers.

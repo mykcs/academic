@@ -1,0 +1,14 @@
+# .gitattributes — Mark binary assets so git does not compute text deltas
+# Repo size ~13 MB (figures tracked directly, no LFS). Largest files:
+#   fig/Exp/image.png  ~1.92 MB
+#   fig/abl/fig_abl.png ~1.09 MB
+#   Other PNG/PDF figures under fig/, papers/, images/
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.pdf binary
+*.ico binary
+*.svg binary
