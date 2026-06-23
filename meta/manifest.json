@@ -1,8 +1,18 @@
 [
   {
+    "source": ".gitattributes",
+    "dest": ".gitattributes",
+    "size": 372
+  },
+  {
     "source": ".gitignore",
     "dest": ".gitignore",
     "size": 16
+  },
+  {
+    "source": ".manifestignore",
+    "dest": ".manifestignore",
+    "size": 425
   },
   {
     "source": "README.md",
