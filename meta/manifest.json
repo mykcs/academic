@@ -7,7 +7,7 @@
   {
     "source": "README.md",
     "dest": "README.md",
-    "size": 1444
+    "size": 1794
   },
   {
     "source": "cv/cv-en.pdf",
@@ -18,6 +18,11 @@
     "source": "cv/cv-zh.pdf",
     "dest": "cv/cv-zh.pdf",
     "size": 828732
+  },
+  {
+    "source": "data/.gitkeep",
+    "dest": "data/.gitkeep",
+    "size": 0
   },
   {
     "source": "images/avatar/avatar.png",
@@ -127,7 +132,7 @@
   {
     "source": "meta/manifest.json",
     "dest": "meta/manifest.json",
-    "size": 11358
+    "size": 11535
   },
   {
     "source": "papers/cvpr2026-osa/slides/slide_01.png",
@@ -390,9 +395,14 @@
     "size": 2209
   },
   {
+    "source": "scripts/README.md",
+    "dest": "scripts/README.md",
+    "size": 1376
+  },
+  {
     "source": "scripts/generate-manifest.py",
     "dest": "scripts/generate-manifest.py",
-    "size": 5867
+    "size": 6882
   },
   {
     "source": "scripts/smart-autopush.sh",
