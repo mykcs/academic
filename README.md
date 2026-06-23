@@ -18,10 +18,12 @@ academic/
 │       ├── cvpr2026-osa/      # CVPR 2026 OSA paper figures
 │       └── iccv2025-gdkvm/    # ICCV 2025 GDKVM paper figures
 ├── transcripts/                # Academic transcripts
-├── data/                       # Structured data (citations, stats)
+├── data/                       # Reserved for structured data (citations, stats) — currently empty
 ├── meta/
 │   └── manifest.json          # Asset inventory
 └── scripts/
+    ├── README.md              # Symlink portability notes (see file)
+    ├── generate-manifest.py   # Regenerates meta/manifest.json from images/
     └── sync.py                # Consumer sync script
 ```
 
