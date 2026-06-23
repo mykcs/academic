@@ -94,6 +94,16 @@ def _build_entries(repo_root: Path) -> List[ManifestEntry]:
     for rel_path in _git_ls_files(repo_root):
         if _is_excluded(rel_path):
             continue
+        # Skip the manifest itself — it is build metadata, not an asset to
+        # sync. Including it caused a self-referential size drift: lstat()
+        # recorded the old file size BEFORE write_manifest() produced the
+        # new (larger) file, so every regen triggered a phantom "drift"
+        # warning that only resolved on the SECOND regen
+        # (CASE-GENERATE-MANIFEST-SELF-SIZE-DRIFT-20260623). sync.py
+        # reads the manifest directly via REPO_ROOT/meta/manifest.json,
+        # so removing it from the entry list does not break consumers.
+        if rel_path == "meta/manifest.json":
+            continue
         full_path = repo_root / rel_path
         # Use lstat (not stat) so symlinks report their OWN size (target path
         # length), not the target file's size. Otherwise manifest content

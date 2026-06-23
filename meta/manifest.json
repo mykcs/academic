@@ -140,11 +140,6 @@
     "size": 1573
   },
   {
-    "source": "meta/manifest.json",
-    "dest": "meta/manifest.json",
-    "size": 11711
-  },
-  {
     "source": "papers/cvpr2026-osa/slides/slide_01.png",
     "dest": "papers/cvpr2026-osa/slides/slide_01.png",
     "size": 211315
@@ -412,7 +407,7 @@
   {
     "source": "scripts/generate-manifest.py",
     "dest": "scripts/generate-manifest.py",
-    "size": 6882
+    "size": 7515
   },
   {
     "source": "scripts/smart-autopush.sh",
