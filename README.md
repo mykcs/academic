@@ -1,3 +1,5 @@
+> 📌 This is a public repository. To make it private, navigate to **Settings → Danger Zone → Change repository visibility → Make private**. Visibility changes are reversible but may affect external links and forks.
+
 # Academic Asset Library
 
 Centralized media and data repository for all academic outputs.
