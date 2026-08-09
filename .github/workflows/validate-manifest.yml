@@ -1,15 +1,9 @@
 name: Validate Manifest
 
-# Companion to scripts/generate-manifest.py.
-# Fails the build if meta/manifest.json is out of sync with the
-# working tree (i.e. there are tracked files not in the manifest,
-# or manifest entries pointing to files that no longer exist).
-# Detects drift like ACAD-P0-003 (14 stale `dest` entries).
-
+# PR gate for scripts/generate-manifest.py.
+# Main-branch validation runs inside bump-version.yml so one main push does not
+# start two separate GitHub-hosted runners for the same repository invariant.
 on:
-  push:
-    branches:
-      - main
   pull_request:
   workflow_dispatch:
 
