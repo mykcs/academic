@@ -15,6 +15,11 @@
     "size": 425
   },
   {
+    "source": "AGENTS.md",
+    "dest": "AGENTS.md",
+    "size": 968
+  },
+  {
     "source": "README.md",
     "dest": "README.md",
     "size": 2018
@@ -33,6 +38,11 @@
     "source": "data/.gitkeep",
     "dest": "data/.gitkeep",
     "size": 0
+  },
+  {
+    "source": "docs/agents/README.md",
+    "dest": "docs/agents/README.md",
+    "size": 3861
   },
   {
     "source": "images/avatar/avatar.png",
