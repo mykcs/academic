@@ -66,6 +66,10 @@ For asset-library changes:
 4. check that no unexpected files, credentials or generated bulk artifacts were introduced;
 5. report which downstream consumers, if any, require a follow-up synchronization.
 
+## CI contract
+
+This repository uses **STANDARD_CI** under the shared [mykcs/.agents CI standard](https://github.com/mykcs/.agents/blob/main/docs/agents/CI_STANDARD.md). The pull-request validator is `python3 scripts/generate-manifest.py --check`; it verifies that the tracked academic assets match `meta/manifest.json`. Merging to `main` also triggers the version workflow, which creates a new `v1.x.y` tag and moves `v1`, including for documentation-only merges. Treat that automatic tag update as a release action and verify its authorization before merging.
+
 ## Maintenance rule
 
 Keep this file focused on durable ownership, structure and consumer contracts. Add a separate dated history note only when a migration/incident has future diagnostic value; do not turn this entrypoint into a chronological diary.
