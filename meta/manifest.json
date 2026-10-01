@@ -42,7 +42,7 @@
   {
     "source": "docs/agents/README.md",
     "dest": "docs/agents/README.md",
-    "size": 4424
+    "size": 4755
   },
   {
     "source": "images/avatar/avatar.png",
@@ -428,6 +428,11 @@
     "source": "scripts/sync.py",
     "dest": "scripts/sync.py",
     "size": 2606
+  },
+  {
+    "source": "scripts/test-release-tags.py",
+    "dest": "scripts/test-release-tags.py",
+    "size": 4963
   },
   {
     "source": "transcripts/gpa-transcript.pdf",

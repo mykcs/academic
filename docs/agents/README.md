@@ -68,7 +68,7 @@ For asset-library changes:
 
 ## CI contract
 
-This repository uses **STANDARD_CI** under the shared [mykcs/.agents CI standard](https://github.com/mykcs/.agents/blob/main/docs/agents/CI_STANDARD.md). The pull-request validator is `python3 scripts/generate-manifest.py --check`; it verifies that the tracked academic assets match `meta/manifest.json`. Merging to `main` also triggers the version workflow, which creates a new `v1.x.y` tag and moves `v1`, including for documentation-only merges. Treat that automatic tag update as a release action and verify its authorization before merging.
+This repository uses **STANDARD_CI** under the shared [mykcs/.agents CI standard](https://github.com/mykcs/.agents/blob/main/docs/agents/CI_STANDARD.md). The pull-request validators are `python3 scripts/generate-manifest.py --check`, which verifies the tracked asset inventory, and `python3 scripts/test-release-tags.py`, which checks release ref updates against disposable local Git remotes. Merging to `main` also triggers the version workflow, which creates a new `v1.x.y` tag and moves `v1`, including for documentation-only merges. The immutable version tag and `v1` alias publish in one atomic transaction; a conflicting version tag or changed alias rejects the entire update. This preserves a continuously present existing alias without overwriting a concurrent publisher. Treat that automatic tag update as a release action and verify its authorization before merging.
 
 ## Maintenance rule
 
