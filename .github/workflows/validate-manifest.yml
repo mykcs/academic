@@ -28,6 +28,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Verify atomic release contract locally
+        run: python3 scripts/test-release-tags.py
+
       - name: Validate manifest matches working tree
         run: |
           set -euo pipefail

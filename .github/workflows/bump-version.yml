@@ -26,6 +26,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Verify atomic release contract locally
+        run: python3 scripts/test-release-tags.py
+
       - name: Validate manifest before publishing a tag
         run: |
           set -euo pipefail
@@ -53,6 +56,8 @@ jobs:
             | grep -E '^v1\.[0-9]+\.[0-9]+$' \
             | head -1)
           LATEST="${LATEST:-v1.0.-1}"
+          V1_TIP=$(git ls-remote --refs origin refs/tags/v1 | awk '{print $1}')
+          echo "v1_tip=$V1_TIP" >> "$GITHUB_OUTPUT"
           echo "latest=$LATEST" >> "$GITHUB_OUTPUT"
           echo "Found latest tag: $LATEST"
 
@@ -70,19 +75,17 @@ jobs:
           echo "new_tag=$NEW_TAG" >> "$GITHUB_OUTPUT"
           echo "old_tag=$CURRENT" >> "$GITHUB_OUTPUT"
 
-      - name: Create and push tag
+      - name: Publish version and v1 alias atomically
         if: steps.bump.outputs.new_tag != steps.bump.outputs.old_tag
+        env:
+          NEW_TAG: ${{ steps.bump.outputs.new_tag }}
+          EXPECTED_V1: ${{ steps.latest_tag.outputs.v1_tip }}
         run: |
-          git tag "${{ steps.bump.outputs.new_tag }}"
-          git push origin "${{ steps.bump.outputs.new_tag }}"
-
-      - name: Update v1 tag to latest
-        if: steps.bump.outputs.new_tag != steps.bump.outputs.old_tag
-        run: |
-          # Move v1 to point to the newly created tag.
-          # jsDelivr may cache the @v1 redirect; consumers should prefer an
-          # explicit immutable v1.x.y tag when reproducibility matters.
-          git tag -d v1
-          git push origin :refs/tags/v1
-          git tag v1 "${{ steps.bump.outputs.new_tag }}"
-          git push origin v1
+          set -euo pipefail
+          # Both refs change together. A concurrent alias update or version-tag
+          # collision rejects the whole transaction and preserves the other ref.
+          # jsDelivr may cache @v1; use immutable v1.x.y for reproducibility.
+          git push --atomic \
+            --force-with-lease="refs/tags/v1:${EXPECTED_V1}" \
+            --force-with-lease="refs/tags/${NEW_TAG}:" \
+            origin "HEAD:refs/tags/${NEW_TAG}" "HEAD:refs/tags/v1"
