@@ -10,6 +10,12 @@ on:
 permissions:
   contents: read
 
+# Superseded validation cancels within one PR. Manual audits remain independent
+# of PR validation and of the separate main version-tag release workflow.
+concurrency:
+  group: manifest-validation-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   validate:
     runs-on: ubuntu-latest
