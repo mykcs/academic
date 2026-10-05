@@ -20,11 +20,6 @@
     "size": 968
   },
   {
-    "source": "README.md",
-    "dest": "README.md",
-    "size": 2018
-  },
-  {
     "source": "cv/cv-en.pdf",
     "dest": "cv/cv-en.pdf",
     "size": 320362
@@ -43,6 +38,46 @@
     "source": "docs/agents/README.md",
     "dest": "docs/agents/README.md",
     "size": 4755
+  },
+  {
+    "source": "docs/dev/ARCHIVE.md",
+    "dest": "docs/dev/ARCHIVE.md",
+    "size": 82
+  },
+  {
+    "source": "docs/dev/DESIGN.md",
+    "dest": "docs/dev/DESIGN.md",
+    "size": 447
+  },
+  {
+    "source": "docs/dev/LATEST.md",
+    "dest": "docs/dev/LATEST.md",
+    "size": 404
+  },
+  {
+    "source": "docs/dev/README.md",
+    "dest": "docs/dev/README.md",
+    "size": 480
+  },
+  {
+    "source": "docs/wish/ARCHIVE.md",
+    "dest": "docs/wish/ARCHIVE.md",
+    "size": 68
+  },
+  {
+    "source": "docs/wish/DESIGN.md",
+    "dest": "docs/wish/DESIGN.md",
+    "size": 505
+  },
+  {
+    "source": "docs/wish/LATEST.md",
+    "dest": "docs/wish/LATEST.md",
+    "size": 534
+  },
+  {
+    "source": "docs/wish/README.md",
+    "dest": "docs/wish/README.md",
+    "size": 459
   },
   {
     "source": "images/avatar/avatar.png",
@@ -80,14 +115,9 @@
     "size": 31651
   },
   {
-    "source": "images/publications/cvpr2026-osa/fig/Exp/image.png",
-    "dest": "images/publications/cvpr2026-osa/fig/Exp/image.png",
-    "size": 2015602
-  },
-  {
-    "source": "images/publications/cvpr2026-osa/fig/Met/fig_overview.png",
-    "dest": "images/publications/cvpr2026-osa/fig/Met/fig_overview.png",
-    "size": 366520
+    "source": "images/publications/cvpr2026-osa/fig_osu_page-0001.jpg",
+    "dest": "images/publications/cvpr2026-osa/fig_osu_page-0001.jpg",
+    "size": 234912
   },
   {
     "source": "images/publications/cvpr2026-osa/fig/abl/fig_abl.png",
@@ -105,6 +135,11 @@
     "size": 430199
   },
   {
+    "source": "images/publications/cvpr2026-osa/fig/Exp/image.png",
+    "dest": "images/publications/cvpr2026-osa/fig/Exp/image.png",
+    "size": 2015602
+  },
+  {
     "source": "images/publications/cvpr2026-osa/fig/fail/fig_fail.png",
     "dest": "images/publications/cvpr2026-osa/fig/fail/fig_fail.png",
     "size": 894152
@@ -115,24 +150,24 @@
     "size": 276471
   },
   {
-    "source": "images/publications/cvpr2026-osa/fig/landscape/fig_landscape.png",
-    "dest": "images/publications/cvpr2026-osa/fig/landscape/fig_landscape.png",
-    "size": 492831
-  },
-  {
     "source": "images/publications/cvpr2026-osa/fig/landscape_2d/image.png",
     "dest": "images/publications/cvpr2026-osa/fig/landscape_2d/image.png",
     "size": 500455
   },
   {
+    "source": "images/publications/cvpr2026-osa/fig/landscape/fig_landscape.png",
+    "dest": "images/publications/cvpr2026-osa/fig/landscape/fig_landscape.png",
+    "size": 492831
+  },
+  {
+    "source": "images/publications/cvpr2026-osa/fig/Met/fig_overview.png",
+    "dest": "images/publications/cvpr2026-osa/fig/Met/fig_overview.png",
+    "size": 366520
+  },
+  {
     "source": "images/publications/cvpr2026-osa/fig/osu/fig_osu.png",
     "dest": "images/publications/cvpr2026-osa/fig/osu/fig_osu.png",
     "size": 174985
-  },
-  {
-    "source": "images/publications/cvpr2026-osa/fig_osu_page-0001.jpg",
-    "dest": "images/publications/cvpr2026-osa/fig_osu_page-0001.jpg",
-    "size": 234912
   },
   {
     "source": "images/publications/cvpr2026-osa/tab/tab_abl.png",
@@ -210,24 +245,9 @@
     "size": 542
   },
   {
-    "source": "papers/cvpr2026-osa/src/README.md",
-    "dest": "papers/cvpr2026-osa/src/README.md",
-    "size": 1479
-  },
-  {
     "source": "papers/cvpr2026-osa/src/cvpr.sty",
     "dest": "papers/cvpr2026-osa/src/cvpr.sty",
     "size": 17969
-  },
-  {
-    "source": "papers/cvpr2026-osa/src/fig/Exp/vis_cap.tex",
-    "dest": "papers/cvpr2026-osa/src/fig/Exp/vis_cap.tex",
-    "size": 391
-  },
-  {
-    "source": "papers/cvpr2026-osa/src/fig/Met/architecture.tex",
-    "dest": "papers/cvpr2026-osa/src/fig/Met/architecture.tex",
-    "size": 580
   },
   {
     "source": "papers/cvpr2026-osa/src/fig/abl/abl.tex",
@@ -245,6 +265,11 @@
     "size": 361
   },
   {
+    "source": "papers/cvpr2026-osa/src/fig/Exp/vis_cap.tex",
+    "dest": "papers/cvpr2026-osa/src/fig/Exp/vis_cap.tex",
+    "size": 391
+  },
+  {
     "source": "papers/cvpr2026-osa/src/fig/fail/fail.tex",
     "dest": "papers/cvpr2026-osa/src/fig/fail/fail.tex",
     "size": 203
@@ -258,6 +283,11 @@
     "source": "papers/cvpr2026-osa/src/fig/landscape/landscape.tex",
     "dest": "papers/cvpr2026-osa/src/fig/landscape/landscape.tex",
     "size": 720
+  },
+  {
+    "source": "papers/cvpr2026-osa/src/fig/Met/architecture.tex",
+    "dest": "papers/cvpr2026-osa/src/fig/Met/architecture.tex",
+    "size": 580
   },
   {
     "source": "papers/cvpr2026-osa/src/fig/osu/osu.tex",
@@ -293,6 +323,11 @@
     "source": "papers/cvpr2026-osa/src/preamble.tex",
     "dest": "papers/cvpr2026-osa/src/preamble.tex",
     "size": 1865
+  },
+  {
+    "source": "papers/cvpr2026-osa/src/README.md",
+    "dest": "papers/cvpr2026-osa/src/README.md",
+    "size": 1479
   },
   {
     "source": "papers/cvpr2026-osa/src/sec/0_abstract.tex",
@@ -360,14 +395,14 @@
     "size": 536
   },
   {
-    "source": "papers/cvpr2026-osa/src/tab/abl.tex",
-    "dest": "papers/cvpr2026-osa/src/tab/abl.tex",
-    "size": 619
-  },
-  {
     "source": "papers/cvpr2026-osa/src/tab/abl_stab.tex",
     "dest": "papers/cvpr2026-osa/src/tab/abl_stab.tex",
     "size": 1778
+  },
+  {
+    "source": "papers/cvpr2026-osa/src/tab/abl.tex",
+    "dest": "papers/cvpr2026-osa/src/tab/abl.tex",
+    "size": 619
   },
   {
     "source": "papers/cvpr2026-osa/src/tab/cap.tex",
@@ -378,11 +413,6 @@
     "source": "papers/cvpr2026-osa/src/tab/type.tex",
     "dest": "papers/cvpr2026-osa/src/tab/type.tex",
     "size": 1443
-  },
-  {
-    "source": "papers/cvpr2026-osa/src/xsec/X_suppl.tex",
-    "dest": "papers/cvpr2026-osa/src/xsec/X_suppl.tex",
-    "size": 1184
   },
   {
     "source": "papers/cvpr2026-osa/src/xsec/efe.tex",
@@ -410,14 +440,24 @@
     "size": 2209
   },
   {
-    "source": "scripts/README.md",
-    "dest": "scripts/README.md",
-    "size": 1376
+    "source": "papers/cvpr2026-osa/src/xsec/X_suppl.tex",
+    "dest": "papers/cvpr2026-osa/src/xsec/X_suppl.tex",
+    "size": 1184
+  },
+  {
+    "source": "README.md",
+    "dest": "README.md",
+    "size": 2018
   },
   {
     "source": "scripts/generate-manifest.py",
     "dest": "scripts/generate-manifest.py",
     "size": 7515
+  },
+  {
+    "source": "scripts/README.md",
+    "dest": "scripts/README.md",
+    "size": 1376
   },
   {
     "source": "scripts/smart-autopush.sh",
